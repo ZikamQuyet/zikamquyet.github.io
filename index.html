@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://cdn-icons.flaticon.com/png/512/2997/premium/2997509.png?token=exp=1638261087~hmac=3a1f26cc721f63dd51bda55d5300a5a2"
+      type="image/icon type"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>tech-master</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1 class="content-title">
+        Transaction trong java là cái vẹo gì? Tại sao phải sử dụng Transaction?
+        ACID transactions?
+      </h1>
+      <p>
+        G’day everyone!<br />
+        “Em có biết gì về Transaction không?” Chắc hẳn các bạn đã từng ít nhiều
+        gặp câu hỏi này khi phỏng vấn xin việc, nghe quen quen đấy nhỉ. Thật
+        đáng tiếc khi phải tự mình thốt ra “Em không biết ạ!” hoặc “Em có nghe
+        qua rồi nhưng....” :v <br />
+        Mình cũng từng trải qua và biết rất rõ cảm giác lúc đó, hối tiếc có, hụt
+        hẫng cũng có nên hôm nay mình có mặt ở đây để tổng hợp lại kiến thức
+        mình đã thu thập được. Dù cũng chỉ dừng lại ở mặt lý thuyết nhưng mong
+        phần nào sẽ giúp được các bạn hiểu đượt đôi chút “nó” là cái gì. Let’s
+        go!!!
+      </p>
+      <h2>Công dụng</h2>
+      <p>
+        Trước tiên hãy đi vào ví dụ “huyền thoại” được lưu truyền từ nhiều bài
+        viết:
+      </p>
+      <ul>
+        <li>
+          Hôm nay là ngày bạn phải thực hiện nghĩa vụ chuyển tiền cho Vợ (kế
+          toán giải ngân) theo hàng tháng
+        </li>
+        <li>
+          Bạn đã thực hiện chuyển tiền 2 tỉ (nhiều nhiều mới sót) và tài khoản
+          của bạn đã bị trừ đi số tiền tương ứng
+        </li>
+        <li>
+          Có một lỗi nào đó trong hệ thống mà tài khoản của vợ bạn không nhận
+          được nhưng tài khoản của bạn vẫn bị trừ tiền
+        </li>
+        <p>=> Bạn bị mang tiếng trễ hạn và giấu quỹ đen.</p>
+      </ul>
+      <p>
+        Đó là hậu quả thực tế của việc không áp dụng Transaction. Nếu áp dụng,
+        Transaction sẽ có 2 hành động (operations):
+      </p>
+      <ul>
+        <li>Tài khoản của bạn bị trừ 2 tỉ</li>
+        <li>Tài khoản của vợ được cộng thêm 2 tỉ</li>
+      </ul>
+      <p>
+        Nếu một trong 2 hành động trên bị lỗi thì Transaction sẽ bị hủy và tài
+        khoản của bạn sẽ không bị thay đổi, quá an toàn đúng không. Chính vì
+        ràng buộc trên nên Transaction được ứng dụng nhiều trong các hành động
+        yêu cầu độ tin cậy, đảm bảo tính chính xác dữ liệu…
+      </p>
+      <ul>
+        <li>Nhóm các hoạt động (với DB) của một tác vụ</li>
+        <li>
+          Nếu có lỗi xảy ra trong Transaction thì tất cả các tác vụ sẽ thực hiện
+          sẽ thất bại
+        </li>
+        <li>Đảm bảo tính toàn vẹn của phiên làm việc với cớ sở dữ liệu</li>
+        <p>=> Đó là 3 công dụng chính của Transaction!</p>
+      </ul>
+      <h2>Các loại Transaction</h2>
+      <p>Transaction được chia thành 2 loại chính:</p>
+      <ul>
+        <li>
+          Flat Transaction: Thực thi các operation là tuần tự từ trái sang phải
+          hoặc từ trên xuống dưới <br />
+          <img
+            src="https://techmaster.vn/media/static/VMQDZWhp/c6hpf2451cof74mrqmp0"
+            alt="image error"
+            width="600"
+          />
+        </li>
+        <li>
+          Nested Transaction: Các operation lồng nhau, việc thực thi các
+          operation dựa theo nguyên tắc từ trong ra ngoài <br />
+          <img
+            src="https://techmaster.vn/media/static/VMQDZWhp/c6hpfbc51cof74mrqmpg"
+            alt="image error"
+            width="600"
+          />
+        </li>
+      </ul>
+      <h2>ACID Transaction</h2>
+      <p>
+        Nghe hoang mang ha! Nhưng đừng lo vì nó chỉ đơn giản là viết tắt các
+        tính chất trong Transaction. Ta sẽ đi vào từng chữ cái ACID.
+      </p>
+      <ul>
+        <li>
+          Atomicity - Tính đơn vị
+          <p>
+            Transaction sẽ xác định ranh giới một cách rõ ràng điểm đầu – điểm
+            cuối là gì, tức là điểm bắt đầu và điểm kết thúc ấy. Có ý nghĩa đơn
+            giản là nếu một thành phần nào đó trong transaction thực thi lỗi thì
+            đồng nghĩa với việc không có gì xảy ra tức không có gì thay đổi về
+            mặt dữ liệu.
+          </p>
+        </li>
+        <li>
+          Consistency - Tính nhất quán
+          <p>
+            Dữ liệu nhất quán từ thời điểm bắt đầu đến thời điểm kết thúc<br />
+            Đảm bảo Db thay đổi chính xác theo trạng thái mà Transaction thực
+            hiện
+          </p>
+        </li>
+        <li>
+          Durability - Tính bền vững (chữ cái I trong ACID mình sẽ nói ở phần
+          cuối)
+          <p>
+            Dữ liệu của Transaction sau khi thực thi được cố định, không có
+            chuyện có thể chuyển lại<br />
+            Hiểu đơn giản là nếu đã truyền tiền đi rồi thì bạn sẽ mất 2 tỉ trong
+            tài khoản chứ không có chuyện 2 tỉ của bạn vẫn giữ nguyên.
+          </p>
+        </li>
+        <li>
+          Isolation - Tính độc lập
+          <p>
+            Các transaction có khả năng hoạt động một cách độc lập và không liên
+            quan đến nhau.
+          </p>
+        </li>
+      </ul>
+      <p>Tạm thời các bạn cứ quan sát trong mô hình sau:</p>
+      <img
+        src="https://techmaster.vn/media/static/VMQDZWhp/c6hphj451cof74mrqmq0"
+        alt="image error"
+        width="600"
+      />
+      <p>Isolation sẽ được xác định qua 3 hiện tượng sau:</p>
+      <ul>
+        <li>
+          Dirty reads: VD – Bạn cập nhật dữ liệu mới lên tài khoản cá nhân trong
+          cty, sếp của bạn nhìn vào số liệu bạn đã cập nhật để báo lên cấp trên.
+          Trong một ngày đẹp trời nào đó, bạn chủ quan cập nhật dữ liệu mà không
+          kiểm tra lại. Hệ thống có lỗi khiến dữ liệu không được commit thành
+          công và trở thành dữ liệu cũ => sếp chửi!
+        </li>
+        <li>
+          Nonrepeatable reads: VD – Bạn cập nhật dữ liệu lên tài khoản cty, sếp
+          bạn xem và tổng hợp và báo cáo lên cấp trên. Bạn nhận ra là đã cập
+          nhật sai và quyết định xóa đi để nhập lại. Vô tình sếp bạn nhìn lại và
+          nhận ra các giá trị đã bị thay đổi trong khi đã báo cáo lên cấp trên
+          rồi => sếp chửi!
+        </li>
+        <li>
+          Phantom reads: VD – Sếp bạn tổng hợp dữ liệu để đáp ứng một số yêu cầu
+          của cấp trên. Bạn cũng táy máy tổng hợp một bản dữ liệu khác muốn giúp
+          sếp một tay và nộp lên. Sếp nhìn vào 2 bản tổng hợp, nhận ra có sự
+          khác nhau và phân vân không biết nên nộp cái nào chính xác hơn => sếp
+          chửi!
+        </li>
+      </ul>
+      <p>
+        Như vậy, để tránh các hiện tượng trên để dẫn đến việc bạn bị "sếp chửi"
+        thì cần phải khóa dữ liệu, không cho những tiến trình khác đụng vào dữ
+        liệu khi Transaction đang làm việc. Có 3 loại khóa khác nhau:
+      </p>
+      <ul>
+        <li>Write locks</li>
+        <li>Read locks</li>
+        <li>Range locks</li>
+      </ul>
+      <p>Các levels sau đây có thể chia ra các mức độ khoá khác nhau:</p>
+      <ul>
+        <li>
+          Read uncommitted: Vẫn có thể đọc được các bản ghi đang được câp nhật
+          của các Transaction tại thời điểm đó
+        </li>
+        <li>
+          Read committed: Phải đợi dữ liệu của Transaction đó được cập nhật xong
+          => Khắc phục được hiện tượng Dirty reads
+        </li>
+        <li>
+          Repeatable read: Giống Read uncommitted nhưng cao hơn một bậc ngăn
+          Transaction không ghi vào dữ liệu đang được đọc bởi Transaction khác
+        </li>
+        <li>
+          Serializable: Mực độ cao nhất, nếu Trans có mệnh đề điều kiện cũng cần
+          đòi hỏi range lock => Khắc phục được Phantom reads
+        </li>
+      </ul>
+      <h2>Kết:</h2>
+      <p>
+        Đó là những kiến thức cơ bản về Transaction mình thu thập được sau khi
+        đã tham khảo được qua khá nhiều nguồn và liên hệ đến các ví dụ dễ hiểu
+        nhất có thể. Mong các bạn có thể dựa vào để khỏi lúng túng khi phỏng vấn
+        nhé!<br />
+        Điều quan trọng cuối cùng là mong các bạn có thể giữ vững tinh thần lạc
+        quan và sức khỏe trong mùa dịch.<br />
+        Stay fabulous! See ya!<br />
+        References:
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://www.geeksforgeeks.org/flat-nested-distributed-transactions/"
+            >https://www.geeksforgeeks.org/flat-nested-distributed-transactions/</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.baeldung.com/transaction-configuration-with-jpa-and-spring"
+            >https://www.baeldung.com/transaction-configuration-with-jpa-and-spring</a
+          >
+        </li>
+      </ul>
+      <p class="comment">Bình Luận</p>
+    </div>
+  </body>
+</html>
