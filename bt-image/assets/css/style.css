@@ -7,6 +7,14 @@ body {
   padding: 30px;
   margin: 100px auto 0 auto;
   background: white;
+  
+}
+.title{
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+.product-list{
   display: flex;
   justify-content: space-between;
   align-items: center;
