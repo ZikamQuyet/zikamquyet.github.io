@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.color {
+  display: flex;
+  margin-bottom: 100px;
+}
+p {
+  color: white;
+  font-size: 32px;
+  transition: all 0.5s linear;
+}
+.box {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.red {
+  background: red;
+  width: 50%;
+}
+.red-15px {
+  margin-right: 15px;
+}
+.color-child {
+  width: 50%;
+}
+.color .color-child .box {
+  height: 200px;
+  width: 100%;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+
+.red1 {
+  width: 33.33333%;
+  background: red;
+}
+.green1 {
+  width: 33.33333%;
+  background: green;
+}
+.green1-15px {
+  margin: 0 15px 0;
+}
+.blue1 {
+  width: 33.33333%;
+  background: blue;
+}
+.box-hover-1:hover p{
+  transform: translate(0,-10px);
+  text-shadow: 0 5px 5px black;
+}
+.box-hover-2:hover p{
+  transform: scale(1.5)
+  /* text-shadow: 0 5px 5px black; */
+}
+h1 {
+  margin-bottom: 100px;
+  float: right;
+  animation: title 5s ease infinite;
+}
+@keyframes title {
+  0% {
+    opacity: 0;
+  }
+  30%,
+  95% {
+    opacity: 1;
+    transform: translate(-50px, 0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-500px, 0);
+  }
+}

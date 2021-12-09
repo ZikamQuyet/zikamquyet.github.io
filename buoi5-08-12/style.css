@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+}
+.box {
+  width: 200px;
+  height: 200px;
+}
+.box1 {
+  background-color: rgb(255, 0, 0);
+  order: 1;
+}
+.box2 {
+  background-color: black;
+  order: 1;
+}
+.box3 {
+  background-color: yellow;
+  order: 0;
+}
+.box4 {
+  background-color: green;
+  order: 1;
+}
+.box5 {
+  background-color: blue;
+  order: 1;
+}
