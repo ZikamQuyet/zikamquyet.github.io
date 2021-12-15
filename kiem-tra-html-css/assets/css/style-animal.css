@@ -1,0 +1,71 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: rgb(173, 173, 173);
+}
+.container {
+  max-width: 1000px;
+  padding: 30px;
+  margin: 100px auto 0 auto;
+  background: white;
+}
+.animal-details {
+  display: flex;
+}
+.animal-image {
+  max-width: 500px;
+}
+
+
+img {
+  width: 100%;
+  box-shadow: 0px 0px 5px 0px rgb(15, 15, 15);
+  border-radius: 20px;
+}
+.animal-content {
+  width: 50%;
+  margin-left: 50px;
+}
+.animal-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+.animal-desc {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.animal-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #4a4a4a;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media (min-width: 740px) and (max-width: 1023px) {
+  .animal-details {
+    display: block
+  }
+  .animal-content{
+    width: 100%;
+    margin: 15px 0;
+  }
+  .animal-image{
+    margin: auto;
+  }
+}
+@media (max-width: 739px) {
+  .animal-details {
+    display: block
+  }
+  .animal-content{
+    width: 100%;
+    margin: 15px 0;
+  }
+  .animal-image{
+    margin: auto;
+  }
+}
