@@ -11,16 +11,14 @@
 html {
   font-size: 14px;
 }
-h1{
-    font-family: 'Inconsolata', monospace;
-    text-transform: uppercase;
-    font-size: 2.8rem;
-}
+
 .container-menu-banner {
   padding: 100px;
 }
 .container-menu-banner h1 {
   font-family: "Inconsolata", monospace;
+  text-transform: uppercase;
+  font-size: 2.8rem;
 }
 .menu {
   padding-left: 400px !important;
