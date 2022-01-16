@@ -116,6 +116,7 @@ p {
 .footer p,
 .footer span {
   font-size: 1.5rem;
+  font-weight: bold;
   color: var(--main-color);
   margin: 0;
 }
