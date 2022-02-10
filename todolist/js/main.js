@@ -191,6 +191,7 @@ btnUpdate.addEventListener('click', function () {
             todos[i].title = todoInputEl.value;
         }
     }
+    optionItems[0].checked = true;
     btnUpdate.style.display = 'none';
     todoInputEl.value = "";
     idUpdate = '';
