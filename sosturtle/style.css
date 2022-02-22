@@ -464,7 +464,10 @@ footer .subscribe form button {
     font-size: 12px;
     line-height: 14px;
   }
-
+  .logo span {
+    font-size: 18px;
+    line-height: 20px;
+  }
   .box-menu {
     padding: 1rem !important;
   }
