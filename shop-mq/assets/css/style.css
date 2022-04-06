@@ -42,10 +42,10 @@ button {
 a {
   text-decoration: none;
 }
-/* img {
-  display: block; 
-   min-width: 100%;
-} */
+img {
+  /* display: block;  */
+  width: 100%;
+}
 /* all */
 h1 {
   font-weight: 700;
@@ -126,7 +126,7 @@ i {
 }
 /* ------------------------------------------------------- */
 /* header */
-header{
+header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -343,7 +343,7 @@ header{
 .social__item + .social__item {
   margin-left: 3.75rem;
 }
-.register a{
+.register a {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -351,14 +351,14 @@ header{
   color: var(--primary--color-2);
 }
 /* active modal */
-.modal--active{
+.modal--active {
   opacity: 1;
   visibility: visible;
 }
 /* ------------------------------------------------------- */
 /* banner */
 #slider__banner {
-  margin: 0;
+  /* margin-top: 3.75rem; */
   position: relative;
 }
 .slider__prev,
@@ -845,7 +845,8 @@ footer li {
   /* header */
   /* hiển thị hamburger menu,menu đa cấp,cart và search */
   .nav-mobile__icon,
-  .nav-mobile-main,.header__search-cart {
+  .nav-mobile-main,
+  .header__search-cart {
     display: initial;
   }
   /* hiển thị search,cart */
@@ -858,7 +859,7 @@ footer li {
   .header-bottom {
     display: none;
   }
-  .header-top__logo-img{
+  .header-top__logo-img {
     text-align: center;
   }
   .header-top__wrapper {
@@ -923,11 +924,14 @@ footer li {
   }
   /* -------------------------------- */
   /* modal-user  */
-  .modal__input input{
+  .modal__input input {
     min-width: 18.75rem;
   }
   /* -------------------------------- */
   /* slider__next slider__prev  */
+  #slider__banner {
+    margin-top: 3.75rem;
+  }
   .slider__next,
   .slider__prev {
     height: 2rem;
