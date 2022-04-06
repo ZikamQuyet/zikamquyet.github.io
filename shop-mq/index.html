@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css"
+      integrity="sha512-YoxvmIzlVlt4nYJ6QwBqDzFc+2aXL7yQwkAuscf2ZAg7daNQxlgQHV+LLRHnRXFWPHRvXhJuBBjQqHAqRFkcVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Mq shop</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="container-fluid p-0 header-top">
+        <div class="container header-top__wrapper">
+          <div class="row align-items-center">
+            <div class="col-3 col-lg-0 nav-mobile__icon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="col-6 col-lg-3 header-top__logo-img">
+              <a href="#" class="text-center">
+                <img
+                  src="assets/image/logo-mq-light.png"
+                  alt=""
+                  class="text-center"
+                />
+              </a>
+            </div>
+            <div class="col-3 header__search-cart">
+              <div class="header__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="header__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+            <div class="col-lg-6 header-lg__search">
+              <input type="text" placeholder="Tìm kiếm..." />
+            </div>
+            <div class="col-lg-3 header__account-cart">
+              <div class="header__account">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <div class="header__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+          </div>
+          <!-- mobile -->
+          <!-- <div class="nav-mobile__icon">
+            <i class="fa-solid fa-bars"></i>
+          </div> -->
+          <!-- hiển thị search + cart -->
+          <!-- <div class="header__search-cart">
+            <div class="header__search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="header__cart">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+          </div> -->
+        </div>
+        <!-- menu hiện ẩn mobile với class nav-mobile-main--active -->
+        <div class="nav-mobile-main">
+          <!-- đăng nhập mobile -->
+          <div class="header__account">
+            <i class="fa-regular fa-user"></i>
+          </div>
+          <!-- menu mobile -->
+          <ul class="nav">
+            <li class="nav__item nav__home">
+              <a href="">Trang chủ</a>
+            </li>
+            <li class="nav__item nav__products--boy">
+              <a href="#">Nam <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="nav-child nav-child__boy">
+                <li class="nav-child__item">
+                  <a href="#">Chuck 70</a>
+                </li>
+                <li class="nav-child__item">
+                  <a href="#">Classic Chuck</a>
+                </li>
+                <li class="nav-child__item">
+                  <a href="#">Skateboarding</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item nav__products--girl">
+              <a href="">Nữ <i class="fa-solid fa-angle-down"></i></a>
+              <ul class="nav-child nav-child__girl">
+                <li class="nav-child__item">
+                  <a href="#">Chuck 70</a>
+                </li>
+                <li class="nav-child__item">
+                  <a href="#">Classic Chuck</a>
+                </li>
+                <li class="nav-child__item">
+                  <a href="#">Skateboarding</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item nav__products">
+              <a href="">Sản phẩm</a>
+            </li>
+            <li class="nav__item nav__news">
+              <a href="">Tin tức</a>
+            </li>
+            <li class="nav__item nav__contact">
+              <a href="">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container-fluid p-0 header-bottom">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 header-bottom__nav">
+              <ul class="nav justify-content-center">
+                <li class="nav__item nav__home nav__item--active">
+                  <a href="">Trang chủ</a>
+                </li>
+                <li class="nav__item nav__products--boy">
+                  <a href="#">Nam <i class="fa-solid fa-angle-down"></i></a>
+                  <ul class="nav-child nav-child__boy">
+                    <li class="nav-child__item">
+                      <a href="#">Chuck 70</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Classic Chuck</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Skateboarding</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item nav__products--girl">
+                  <a href="">Nữ <i class="fa-solid fa-angle-down"></i></a>
+                  <ul class="nav-child nav-child__girl">
+                    <li class="nav-child__item">
+                      <a href="#">Chuck 70</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Classic Chuck</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Skateboarding</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item nav__products">
+                  <a href="">Sản phẩm</a>
+                </li>
+                <li class="nav__item nav__news">
+                  <a href="">Tin tức</a>
+                </li>
+                <li class="nav__item nav__contact">
+                  <a href="">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- modal đăng nhập -->
+    <!-- active modal = class modal--active -->
+    <div class="modal-user modal-login">
+      <div class="modal__warpper">
+        <div class="modal__title">
+          <h1>ĐĂNG NHẬP</h1>
+        </div>
+        <form action="">
+          <div class="modal__input">
+            <label for="email"><p>Email *</p> </label>
+            <input type="email" placeholder="nhập email" id="email" />
+            <small class="input__check input__check--error">
+              <p>Sai email...</p></small
+            >
+          </div>
+          <div class="modal__input">
+            <label for="password"><p>Mật khẩu *</p></label>
+            <input type="password" placeholder="nhập email" id="password" />
+            <small class="input__check input__check--error">
+              <p>Sai mật khẩu...</p></small
+            >
+          </div>
+          <div class="forgot-password">
+            <a href="#"><p>Quên mật khẩu?</p></a>
+          </div>
+          <div class="modal__btn">
+            <button type="submit" class="btn btn--lg" id="btn-login">
+              Đăng nhập
+            </button>
+          </div>
+        </form>
+        <div class="login-with">
+          <p>Hoặc đăng nhập với</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+              /></a>
+            </li>
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_google_48px.svg" alt=""
+              /></a>
+            </li>
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="register">
+          <p>Bạn chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal đăng ký -->
+    <!-- active modal = class modal--active -->
+    <div class="modal-user modal-sign-in">
+      <div class="modal__warpper">
+        <div class="modal__title">
+          <h1>ĐĂNG KÝ</h1>
+        </div>
+        <form action="">
+          <div class="modal__input">
+            <label for="name"><p>Họ tên *</p> </label>
+            <input type="text" placeholder="Nhập họ tên" id="name" />
+            <small class="input__check input__check--error">
+              <p>Không bỏ trống...</p></small
+            >
+          </div>
+          <div class="modal__input">
+            <label for="email"><p>Email *</p> </label>
+            <input type="email" placeholder="Nhập email" id="email" />
+            <small class="input__check input__check--error">
+              <p>Sai email...</p></small
+            >
+          </div>
+          <div class="modal__input">
+            <label for="phone"><p>SĐT *</p> </label>
+            <input type="text" placeholder="Nhập SĐT" id="phone" />
+            <small class="input__check input__check--error">
+              <p>Sai SĐT...</p></small
+            >
+          </div>
+          <div class="modal__input">
+            <label for="password"><p>Mật khẩu *</p></label>
+            <input type="password" placeholder="Nhập mật khẩu" id="password" />
+            <small class="input__check input__check--error">
+              <p>Sai mật khẩu...</p></small
+            >
+          </div>
+          <div class="modal__input">
+            <label for="retype-password"><p>Xác nhận mật khẩu *</p></label>
+            <input
+              type="password"
+              placeholder="Nhập lại mật khẩu"
+              id="retype-password"
+            />
+            <small class="input__check input__check--error">
+              <p>Sai mật khẩu...</p></small
+            >
+          </div>
+          <div class="modal__btn">
+            <button type="submit" class="btn btn--lg" id="btn-login">
+              Đăng ký
+            </button>
+          </div>
+        </form>
+        <div class="login-with">
+          <p>Hoặc đăng nhập với</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+              /></a>
+            </li>
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_google_48px.svg" alt=""
+              /></a>
+            </li>
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="register">
+          <p>Bạn đã có tài khoản? <a href="#">Đăng nhập ngay</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal đăng ký -->
+    <!-- active modal = class modal--active -->
+    <div class="modal-user modal-forgot-password">
+      <div class="modal__warpper">
+        <div class="modal__title">
+          <h1>Lấy lại mật khẩu</h1>
+        </div>
+        <form action="">
+          <div class="modal__input">
+            <label for="emai-sdt"><p>Email/SĐT *</p> </label>
+            <input type="text" placeholder="Nhập email/SĐT" id="emai-sdt" />
+            <small class="input__check input__check--error">
+              <p>Không bỏ trống...</p></small
+            >
+          </div>
+
+          <div class="modal__input">
+            <label for="code"><p>Code *</p> </label>
+            <input type="text" placeholder="Nhập code" id="code" disabled />
+            <small class="input__check input__check--error">
+              <p>Sai code...</p></small
+            >
+          </div>
+          <div class="modal__input">
+            <label for="password"><p>Mật khẩu mới *</p></label>
+            <input
+              type="password"
+              placeholder="Nhập mật khẩu mới"
+              id="password"
+              disabled
+            />
+            <small class="input__check input__check--error">
+              <p>Sai mật khẩu...</p></small
+            >
+          </div>
+          <div class="modal__input">
+            <label for="retype-password"><p>Xác nhận mật khẩu *</p></label>
+            <input
+              type="password"
+              placeholder="Nhập lại mật khẩu"
+              id="retype-password"
+              disabled
+            />
+            <small class="input__check input__check--error">
+              <p>Sai mật khẩu...</p></small
+            >
+          </div>
+          <div class="modal__btn">
+            <button type="submit" class="btn btn--lg" id="btn-login">
+              Lấy code
+            </button>
+          </div>
+        </form>
+        <div class="login-with">
+          <p>Hoặc đăng nhập với</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+              /></a>
+            </li>
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_google_48px.svg" alt=""
+              /></a>
+            </li>
+            <li class="social__item">
+              <a href="#"
+                ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="register">
+          <p>Bạn đã có tài khoản? <a href="#">Đăng nhập ngay</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- banner -->
+    <section id="slider__banner" class="container-fluid p-0">
+      <i class="fa fa-angle-left slider__prev slider__change--hide"></i>
+      <i class="fa fa-angle-right slider__next"></i>
+      <ul class="slider__dots">
+        <li
+          class="slider__dot__item slider__dot__item--active"
+          data-index="0"
+        ></li>
+        <li class="slider__dot__item" data-index="1"></li>
+        <li class="slider__dot__item" data-index="2"></li>
+      </ul>
+      <div class="slider__wrapper">
+        <div class="slider__main">
+          <div class="slider__item">
+            <img src="assets/image/banner-1.jpg" alt="" />
+          </div>
+          <div class="slider__item">
+            <img src="assets/image/banner-2.jpg" alt="" />
+          </div>
+          <div class="slider__item">
+            <img src="assets/image/banner-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- collection -->
+    <section id="collection">
+      <div class="container collection__inner">
+        <div class="row collection__items">
+          <div class="col-4 col-lg-6 collection__item collection__classic">
+            <img
+              src="assets/image/classic.jpg"
+              alt="classic-collection"
+              class="img-fluid"
+            />
+            <a href="#" class="btn btn--lg">Xem Thêm</a>
+            <h2>CLASSIC</h2>
+          </div>
+          <div class="col-4 col-lg-3 collection__item collection__chuck07s">
+            <img
+              src="assets/image/CHUCK 07S.jpg"
+              alt="classic-collection"
+              class="img-fluid"
+            />
+            <a href="#" class="btn btn--lg">Xem Thêm</a>
+            <h2>CHUCK 07S</h2>
+          </div>
+          <div class="col-4 col-lg-3 collection__item collection__sunbaked">
+            <img
+              src="assets/image/SUNBAKED.jpg"
+              alt="classic-collection"
+              class="img-fluid"
+            />
+            <a href="#" class="btn btn--lg">Xem Thêm</a>
+            <h2>SUNBAKED</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--sản phẩm mới  -->
+    <section id="new-products">
+      <div class="container new-product__inner">
+        <div class="title-group">
+          <h2>Sản phẩm mới</h2>
+        </div>
+        <div class="link-group">
+          <a href="#">Xem thêm</a>
+        </div>
+        <div class="products">
+          <i class="fa fa-angle-left slider__prev slider__change--hide"></i>
+          <i class="fa fa-angle-right slider__next"></i>
+          <div class="products__wrapper">
+            <div class="products__main row">
+              <!-- product-card-1 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-2 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-2.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-2-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-3 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-3.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-3-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-4 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-4.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-4-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-5 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-6 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-7 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-8 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Leather-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Leather-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-info row">
+          <div
+            class="col-12 col-lg-7 row justify-content-center product-images"
+          >
+            <div class="col-3 product-images__slider">
+              <div class="product-images__slider-img">
+                <img
+                  src="assets/image/chuck-classic/Chuck Taylor All Star-1-a.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="product-images__slider-img my-3">
+                <img
+                  src="assets/image/chuck-classic/Chuck Taylor All Star-1-b.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="product-images__slider-img">
+                <img
+                  src="assets/image/chuck-classic/Chuck Taylor All Star-1-c.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+            <div class="col-7 product-images__main">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-1.jpg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 product-info__details">
+            <div class="product-info__details-title">
+              <h2>Chuck 70 Vintage Canvas-2</h2>
+            </div>
+            <ul class="product-info__list">
+              <li class="product-info__list-info product-info__list--active">
+                THÔNG TIN
+              </li>
+              <li class="product-info__list-detail">CHI TIẾT</li>
+              <li class="product-info__list-size">SIZE</li>
+            </ul>
+            <div class="product-info__desc">
+              Kiểu dáng đẹp, chất liệu cao cấp, màu sắc sang trọng và hài hòa
+              trong cách phối đồ dành cho những ngày đi làm, dạo phố
+            </div>
+            <a href="#" class="btn btn--lg">Xem Thêm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sản phẩm bán chạy -->
+    <section id="selling-products">
+      <div class="container selling-products__inner">
+        <div class="title-group">
+          <h2>Sản phẩm bán chạy</h2>
+        </div>
+        <div class="link-group">
+          <a href="#">Xem thêm</a>
+        </div>
+        <div class="products row">
+          <!-- product-card-1 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-1.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-1-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+
+          <!-- product-card-2 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-2.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-2-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+
+          <!-- product-card-3 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-3.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-3-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+
+          <!-- product-card-4 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-4.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star-4-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+
+          <!-- product-card-5 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+
+          <!-- product-card-6 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+
+          <!-- product-card-7 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+
+          <!-- product-card-8 -->
+          <div class="product__card col-6 col-lg-3">
+            <div class="product__card__img">
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Leather-1.jpg"
+                alt=""
+                class="img-fluid img--front"
+              />
+              <img
+                src="assets/image/chuck-classic/Chuck Taylor All Star Leather-1-c.jpg"
+                alt=""
+                class="img-fluid img--back"
+              />
+              <ul class="product__colors">
+                <li
+                  class="product__color--black product__color--active"
+                  data-index="0"
+                ></li>
+                <li class="product__color--white" data-index="1"></li>
+              </ul>
+              <div class="product__btn">
+                <button class="btn product__btn__buy">
+                  <p>BUY NOW</p>
+                </button>
+                <button class="btn product__btn__add-cart">
+                  <img
+                    src="assets/icon/cart-plus-white.svg"
+                    alt=""
+                    class="icon--front"
+                  />
+                  <img
+                    src="assets/icon/cart-plus-black.svg"
+                    alt=""
+                    class="icon--back"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="product__card__title">
+              <span> Canvas Platform Chuck Taylor All Star </span>
+            </div>
+            <div class="product__card__price">
+              <span> 1.250.000 đ </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sản phẩm giảm giá -->
+    <section id="discount-products">
+      <div class="discount-product-banner container-fluid p-0">
+        <div class="discount-product-banner__img">
+          <img
+            src="assets/image/banner discount.jpg"
+            alt=""
+            class="img-fluid"
+          />
+        </div>
+        <div class="row discount-product-banner__desc">
+          <div class="col-4 text-center">
+            <h1>KHUYẾN MÃI <span>GIẢM GIÁ 50%</span></h1>
+            <a href="#" class="btn btn--lg">Xem Thêm</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container discount-products__inner">
+        <div class="title-group">
+          <h2>Sản phẩm giảm giá</h2>
+        </div>
+        <div class="link-group">
+          <a href="#">Xem thêm</a>
+        </div>
+        <div class="products">
+          <i class="fa fa-angle-left slider__prev slider__change--hide"></i>
+          <i class="fa fa-angle-right slider__next"></i>
+          <div class="products__wrapper">
+            <div class="products__main row">
+              <!-- product-card-1 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-2 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-2.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-2-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-3 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-3.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-3-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-4 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-4.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star-4-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-5 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-6 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-7 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+
+              <!-- product-card-8 -->
+              <div class="product__card col-6 col-lg-3">
+                <div class="product__card__img">
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Leather-1.jpg"
+                    alt=""
+                    class="img-fluid img--front"
+                  />
+                  <img
+                    src="assets/image/chuck-classic/Chuck Taylor All Star Leather-1-c.jpg"
+                    alt=""
+                    class="img-fluid img--back"
+                  />
+                  <ul class="product__colors">
+                    <li
+                      class="product__color--black product__color--active"
+                      data-index="0"
+                    ></li>
+                    <li class="product__color--white" data-index="1"></li>
+                  </ul>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>BUY NOW</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <span> Canvas Platform Chuck Taylor All Star </span>
+                </div>
+                <div class="product__card__price">
+                  <span> 1.250.000 đ </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tin tức -->
+    <section id="news">
+      <div class="container">
+        <div class="title-group">
+          <h2>Tin tức</h2>
+        </div>
+        <div class="link-group">
+          <a href="#">Xem thêm</a>
+        </div>
+        <div class="row list-new">
+          <div class="col-12 col-lg-4 new-card">
+            <div class="new-card__inner">
+              <div class="new-card__img">
+                <img
+                  src="assets/image/news/news-1.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="new-card__title">
+                <h3>Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam?</h3>
+              </div>
+              <div class="new-card__desc">
+                <p>
+                  Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
+                  Converse...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 new-card">
+            <div class="new-card__inner">
+              <div class="new-card__img">
+                <img
+                  src="assets/image/news/news-1.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="new-card__title">
+                <h3>Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam?</h3>
+              </div>
+              <div class="new-card__desc">
+                <p>
+                  Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
+                  Converse...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-4 new-card">
+            <div class="new-card__inner">
+              <div class="new-card__img">
+                <img
+                  src="assets/image/news/news-1.jpg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+              <div class="new-card__title">
+                <h3>Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam?</h3>
+              </div>
+              <div class="new-card__desc">
+                <p>
+                  Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
+                  Converse...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- banner nhận tin tức -->
+    <section id="subscribe">
+      <div class="container-fluid p-0">
+        <div class="subscribe-banner">
+          <div class="subscribe-banner__img">
+            <img
+              src="assets/image/banner đăng ký thông tin.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div class="subscribe-banner__desc row justify-content-center">
+            <div class="col-12 col-lg-4 text-center">
+              <h1>ĐĂNG KÝ</h1>
+              <p>
+                Đăng ký nhận bản tin của MQ để cập nhật những sản phẩm mới, nhận
+                thông tin ưu đãi đặc biệt và thông tin giảm giá khác.
+              </p>
+              <form action="">
+                <input type="text" placeholder="Nhập email của bạn" />
+                <button class="btn btn--lg">GỬI</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="row footer-main">
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>GIỚI THIỆU</h2></div>
+            <div class="footer-item__desc">
+              <p>
+                Chào mừng bạn đến với ngôi nhà Converse! Tại đây, mỗi một dòng
+                chữ, mỗi chi tiết và hình ảnh đều là những bằng chứng mang dấu
+                ấn lịch sử Converse 100 năm, và đang không ngừng phát triển lớn
+                mạnh. />
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>ĐỊA CHỈ</h2></div>
+            <div class="footer-item__desc">
+              <div class="row align-items-center">
+                <div class="col-2">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="col-10">
+                  <p>319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</p>
+                </div>
+
+                <div class="col-2">
+                  <i class="fa-solid fa-phone-flip"></i>
+                </div>
+                <div class="col-10 my-3">
+                  <p>012 345 6789</p>
+                </div>
+
+                <div class="col-2">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="col-10">
+                  <p>mq.converse@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>MENU</h2></div>
+            <ul class="row">
+              <li class="col-6 footer-item__menu--active">
+                <a href="#">Trang chủ</a>
+              </li>
+              <li class="col-6"><a href="#">Nam</a></li>
+              <li class="col-6"><a href="#">Nữ</a></li>
+              <li class="col-6"><a href="#">Sản phẩm</a></li>
+              <li class="col-6"><a href="#">Tin tức</a></li>
+              <li class="col-6"><a href="#">Liên hệ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>MẠNG XÃ HỘI</h2></div>
+            <div class="row">
+              <div class="col-1 mx-2">
+                <a href="#"
+                  ><img src="assets/icon/icons8_facebook_96px.svg" alt=""
+                /></a>
+              </div>
+              <div class="col-1 mx-2">
+                <a href="#"
+                  ><img src="assets/icon/icons8_Instagram_96px.svg" alt=""
+                /></a>
+              </div>
+              <div class="col-1 mx-2">
+                <a href="#"
+                  ><img src="assets/icon/icons8_pinterest_96px.svg" alt=""
+                /></a>
+              </div>
+              <div class="col-1 mx-2">
+                <a href="#"
+                  ><img src="assets/icon/icons8_twitter_96px.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-end">
+          <a href="" class="footer-end__link">
+            <img src="assets/icon/icons8_paypal_96px.svg" alt="" />
+          </a>
+
+          <a href="" class="footer-end__link">
+            <img src="assets/icon/icons8_visa_96px.svg" alt="" />
+          </a>
+
+          <a href="" class="footer-end__link" class="text-end">
+            <img src="assets/icon/icons8_mastercard_96px.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
