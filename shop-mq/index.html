@@ -39,7 +39,12 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <title>Mq shop</title>
+    <link
+      rel="shortcut icon"
+      href="assets/image/logo-mq-dark.png"
+      type="image/x-icon"
+    />
+    <title>Trang chủ</title>
   </head>
   <body>
     <!-- header -->
@@ -51,7 +56,7 @@
               <i class="fa-solid fa-bars"></i>
             </div>
             <div class="col-6 col-lg-3 header-top__logo-img">
-              <a href="#" class="text-center">
+              <a href="index.html" class="text-center">
                 <img
                   src="assets/image/logo-mq-light.png"
                   alt=""
@@ -60,13 +65,19 @@
               </a>
             </div>
 
-            <div class="col-lg-6 header-lg__search">
+            <div class="col-lg-6 header__search-input">
               <input type="text" placeholder="Tìm kiếm..." />
             </div>
 
             <div class="col-3 col-lg-3 header__account-search-cart">
+              <!-- search mobile -->
               <div class="header__search">
                 <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="header__search-container">
+                  <div class="header__search-input">
+                    <input type="text" placeholder="Tìm kiếm..." />
+                  </div>
+                </div>
               </div>
               <div class="header__account">
                 <i class="fa-regular fa-user"></i>
@@ -99,8 +110,12 @@
                     </div>
 
                     <div class="cart-btn">
-                      <a href="#" class="btn btn--s">Xem giỏ hàng</a>
-                      <a href="#" class="btn btn--s">Thanh toán</a>
+                      <a href="gio-hang.html" class="btn btn--s"
+                        >Xem giỏ hàng</a
+                      >
+                      <a href="thanh-toan.html" class="btn btn--s"
+                        >Thanh toán</a
+                      >
                     </div>
                   </div>
                 </div>
@@ -112,53 +127,55 @@
         <!-- mobile -->
         <!-- menu hiện ẩn mobile với class nav-mobile-main--active -->
         <div class="nav-mobile-main">
-          <!-- đăng nhập mobile -->
-          <div class="header__account">
-            <i class="fa-regular fa-user"></i>
+          <div class="nav-mobile-main__wrapper">
+            <!-- đăng nhập mobile -->
+            <div class="header__account">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <!-- menu mobile -->
+            <ul class="nav">
+              <li class="nav__item nav__home">
+                <a href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav__item nav__products--boy">
+                <a href="#">Nam <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="nav-child nav-child__boy">
+                  <li class="nav-child__item">
+                    <a href="#">Chuck 70</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Classic Chuck</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Skateboarding</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item nav__products--girl">
+                <a href="">Nữ <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="nav-child nav-child__girl">
+                  <li class="nav-child__item">
+                    <a href="#">Chuck 70</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Classic Chuck</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Skateboarding</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item nav__products">
+                <a href="">Sản phẩm</a>
+              </li>
+              <li class="nav__item nav__news">
+                <a href="tin-tuc.html">Tin tức</a>
+              </li>
+              <li class="nav__item nav__contact">
+                <a href="">Liên hệ</a>
+              </li>
+            </ul>
           </div>
-          <!-- menu mobile -->
-          <ul class="nav">
-            <li class="nav__item nav__home">
-              <a href="">Trang chủ</a>
-            </li>
-            <li class="nav__item nav__products--boy">
-              <a href="#">Nam <i class="fa-solid fa-angle-down"></i></a>
-              <ul class="nav-child nav-child__boy">
-                <li class="nav-child__item">
-                  <a href="#">Chuck 70</a>
-                </li>
-                <li class="nav-child__item">
-                  <a href="#">Classic Chuck</a>
-                </li>
-                <li class="nav-child__item">
-                  <a href="#">Skateboarding</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav__item nav__products--girl">
-              <a href="">Nữ <i class="fa-solid fa-angle-down"></i></a>
-              <ul class="nav-child nav-child__girl">
-                <li class="nav-child__item">
-                  <a href="#">Chuck 70</a>
-                </li>
-                <li class="nav-child__item">
-                  <a href="#">Classic Chuck</a>
-                </li>
-                <li class="nav-child__item">
-                  <a href="#">Skateboarding</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav__item nav__products">
-              <a href="">Sản phẩm</a>
-            </li>
-            <li class="nav__item nav__news">
-              <a href="">Tin tức</a>
-            </li>
-            <li class="nav__item nav__contact">
-              <a href="">Liên hệ</a>
-            </li>
-          </ul>
         </div>
       </div>
 
@@ -168,7 +185,7 @@
             <div class="col-12 header-bottom__nav">
               <ul class="nav justify-content-center">
                 <li class="nav__item nav__home nav__item--active">
-                  <a href="">Trang chủ</a>
+                  <a href="index.html">Trang chủ</a>
                 </li>
                 <li class="nav__item nav__products--boy">
                   <a href="#">Nam <i class="fa-solid fa-angle-down"></i></a>
@@ -202,7 +219,7 @@
                   <a href="">Sản phẩm</a>
                 </li>
                 <li class="nav__item nav__news">
-                  <a href="">Tin tức</a>
+                  <a href="tin-tuc.html">Tin tức</a>
                 </li>
                 <li class="nav__item nav__contact">
                   <a href="">Liên hệ</a>
@@ -212,189 +229,193 @@
           </div>
         </div>
       </div>
+      <!-- modal đăng nhập -->
+      <!-- active modal = class modal--active -->
+      <div class="modal-user modal-login">
+        <div class="modal__wrapper">
+          <div class="modal__title">
+            <h1>ĐĂNG NHẬP</h1>
+          </div>
+          <form action="" id="form-login">
+            <div class="modal__input">
+              <label for="email"><p>Email *</p> </label>
+              <input type="email" placeholder="nhập email" id="email" />
+              <small class="input__check input__check--error">
+                <p>Sai email...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="password"><p>Mật khẩu *</p></label>
+              <input type="password" placeholder="nhập email" id="password" />
+              <small class="input__check input__check--error">
+                <p>Sai mật khẩu...</p></small
+              >
+            </div>
+            <div class="forgot-password">
+              <p>Quên mật khẩu?</p>
+            </div>
+            <div class="modal__btn">
+              <button type="submit" class="btn btn--lg" id="btn-login">
+                Đăng nhập
+              </button>
+            </div>
+          </form>
+          <div class="login-with">
+            <p>Hoặc đăng nhập với</p>
+            <ul class="social">
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_google_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="register-login register">
+            <p>Bạn chưa có tài khoản? <span href="">Đăng ký ngay</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal đăng ký -->
+      <!-- active modal = class modal--active -->
+      <div class="modal-user modal-sign-in">
+        <div class="modal__wrapper">
+          <div class="modal__title">
+            <h1>ĐĂNG KÝ</h1>
+          </div>
+          <form action="" id="form-register">
+            <div class="modal__input">
+              <label for="name"><p>Họ tên *</p> </label>
+              <input type="text" placeholder="Nhập họ tên" id="name" />
+              <small class="input__check input__check--error">
+                <p>Không bỏ trống...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="email"><p>Email *</p> </label>
+              <input type="email" placeholder="Nhập email" id="email" />
+              <small class="input__check input__check--error">
+                <p>Sai email...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="phone"><p>SĐT *</p> </label>
+              <input type="text" placeholder="Nhập SĐT" id="phone" />
+              <small class="input__check input__check--error">
+                <p>Sai SĐT...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="password"><p>Mật khẩu *</p></label>
+              <input
+                type="password"
+                placeholder="Nhập mật khẩu"
+                id="password"
+              />
+              <small class="input__check input__check--error">
+                <p>Sai mật khẩu...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="retype-password"><p>Xác nhận mật khẩu *</p></label>
+              <input
+                type="password"
+                placeholder="Nhập lại mật khẩu"
+                id="retype-password"
+              />
+              <small class="input__check input__check--error">
+                <p>Sai mật khẩu...</p></small
+              >
+            </div>
+            <div class="modal__btn">
+              <button type="submit" class="btn btn--lg" id="btn-login">
+                Đăng ký
+              </button>
+            </div>
+          </form>
+          <div class="login-with">
+            <p>Hoặc đăng nhập với</p>
+            <ul class="social">
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_google_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="register-login login">
+            <p>Bạn đã có tài khoản? <span href="#">Đăng nhập ngay</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quên mật khẩu -->
+      <!-- active modal = class modal--active -->
+      <div class="modal-user modal-forgot-password">
+        <div class="modal__wrapper">
+          <div class="modal__title">
+            <h1>Lấy lại mật khẩu</h1>
+          </div>
+          <form action="" id="form-forgot-password">
+            <div class="modal__input">
+              <label for="emai-sdt"><p>Email/SĐT *</p> </label>
+              <input type="text" placeholder="Nhập email/SĐT" id="emai-sdt" />
+              <small class="input__check input__check--error">
+                <p>Không bỏ trống...</p></small
+              >
+            </div>
+            <div class="modal__btn">
+              <button type="submit" class="btn btn--lg" id="btn-login">
+                Gửi
+              </button>
+            </div>
+          </form>
+          <div class="login-with">
+            <p>Hoặc đăng nhập với</p>
+            <ul class="social">
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_google_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="register-login login">
+            <p>Bạn đã có tài khoản? <span href="#">Đăng nhập ngay</span></p>
+          </div>
+        </div>
+      </div>
     </header>
-    <!-- modal đăng nhập -->
-    <!-- active modal = class modal--active -->
-    <div class="modal-user modal-login">
-      <div class="modal__warpper">
-        <div class="modal__title">
-          <h1>ĐĂNG NHẬP</h1>
-        </div>
-        <form action="">
-          <div class="modal__input">
-            <label for="email"><p>Email *</p> </label>
-            <input type="email" placeholder="nhập email" id="email" />
-            <small class="input__check input__check--error">
-              <p>Sai email...</p></small
-            >
-          </div>
-          <div class="modal__input">
-            <label for="password"><p>Mật khẩu *</p></label>
-            <input type="password" placeholder="nhập email" id="password" />
-            <small class="input__check input__check--error">
-              <p>Sai mật khẩu...</p></small
-            >
-          </div>
-          <div class="forgot-password">
-            <a href="#"><p>Quên mật khẩu?</p></a>
-          </div>
-          <div class="modal__btn">
-            <button type="submit" class="btn btn--lg" id="btn-login">
-              Đăng nhập
-            </button>
-          </div>
-        </form>
-        <div class="login-with">
-          <p>Hoặc đăng nhập với</p>
-          <ul class="social">
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
-              /></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_google_48px.svg" alt=""
-              /></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
-              /></a>
-            </li>
-          </ul>
-        </div>
-        <div class="register">
-          <p>Bạn chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- modal đăng ký -->
-    <!-- active modal = class modal--active -->
-    <div class="modal-user modal-sign-in">
-      <div class="modal__warpper">
-        <div class="modal__title">
-          <h1>ĐĂNG KÝ</h1>
-        </div>
-        <form action="">
-          <div class="modal__input">
-            <label for="name"><p>Họ tên *</p> </label>
-            <input type="text" placeholder="Nhập họ tên" id="name" />
-            <small class="input__check input__check--error">
-              <p>Không bỏ trống...</p></small
-            >
-          </div>
-          <div class="modal__input">
-            <label for="email"><p>Email *</p> </label>
-            <input type="email" placeholder="Nhập email" id="email" />
-            <small class="input__check input__check--error">
-              <p>Sai email...</p></small
-            >
-          </div>
-          <div class="modal__input">
-            <label for="phone"><p>SĐT *</p> </label>
-            <input type="text" placeholder="Nhập SĐT" id="phone" />
-            <small class="input__check input__check--error">
-              <p>Sai SĐT...</p></small
-            >
-          </div>
-          <div class="modal__input">
-            <label for="password"><p>Mật khẩu *</p></label>
-            <input type="password" placeholder="Nhập mật khẩu" id="password" />
-            <small class="input__check input__check--error">
-              <p>Sai mật khẩu...</p></small
-            >
-          </div>
-          <div class="modal__input">
-            <label for="retype-password"><p>Xác nhận mật khẩu *</p></label>
-            <input
-              type="password"
-              placeholder="Nhập lại mật khẩu"
-              id="retype-password"
-            />
-            <small class="input__check input__check--error">
-              <p>Sai mật khẩu...</p></small
-            >
-          </div>
-          <div class="modal__btn">
-            <button type="submit" class="btn btn--lg" id="btn-login">
-              Đăng ký
-            </button>
-          </div>
-        </form>
-        <div class="login-with">
-          <p>Hoặc đăng nhập với</p>
-          <ul class="social">
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
-              /></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_google_48px.svg" alt=""
-              /></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
-              /></a>
-            </li>
-          </ul>
-        </div>
-        <div class="register">
-          <p>Bạn đã có tài khoản? <a href="#">Đăng nhập ngay</a></p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Quên mật khẩu -->
-    <!-- active modal = class modal--active -->
-    <div class="modal-user modal-forgot-password">
-      <div class="modal__warpper">
-        <div class="modal__title">
-          <h1>Lấy lại mật khẩu</h1>
-        </div>
-        <form action="">
-          <div class="modal__input">
-            <label for="emai-sdt"><p>Email/SĐT *</p> </label>
-            <input type="text" placeholder="Nhập email/SĐT" id="emai-sdt" />
-            <small class="input__check input__check--error">
-              <p>Không bỏ trống...</p></small
-            >
-          </div>
-          <div class="modal__btn">
-            <button type="submit" class="btn btn--lg" id="btn-login">
-              Gửi
-            </button>
-          </div>
-        </form>
-        <div class="login-with">
-          <p>Hoặc đăng nhập với</p>
-          <ul class="social">
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
-              /></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_google_48px.svg" alt=""
-              /></a>
-            </li>
-            <li class="social__item">
-              <a href="#"
-                ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
-              /></a>
-            </li>
-          </ul>
-        </div>
-        <div class="register">
-          <p>Bạn đã có tài khoản? <a href="#">Đăng nhập ngay</a></p>
-        </div>
-      </div>
-    </div>
 
     <!-- banner -->
     <section id="slider-banner" class="container-fluid p-0">
@@ -478,7 +499,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -524,7 +545,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -570,7 +591,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -616,7 +637,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -662,7 +683,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -708,7 +729,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -754,7 +775,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -800,7 +821,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -912,7 +933,7 @@
                 <li class="product__color--white" data-index="1"></li>
               </ul>
               <div class="product__btn">
-                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__buy"><p>MUA NGAY</p></button>
                 <button class="btn product__btn__add-cart">
                   <img
                     src="assets/icon/cart-plus-white.svg"
@@ -956,7 +977,7 @@
                 <li class="product__color--white" data-index="1"></li>
               </ul>
               <div class="product__btn">
-                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__buy"><p>MUA NGAY</p></button>
                 <button class="btn product__btn__add-cart">
                   <img
                     src="assets/icon/cart-plus-white.svg"
@@ -1000,7 +1021,7 @@
                 <li class="product__color--white" data-index="1"></li>
               </ul>
               <div class="product__btn">
-                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__buy"><p>MUA NGAY</p></button>
                 <button class="btn product__btn__add-cart">
                   <img
                     src="assets/icon/cart-plus-white.svg"
@@ -1044,7 +1065,7 @@
                 <li class="product__color--white" data-index="1"></li>
               </ul>
               <div class="product__btn">
-                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__buy"><p>MUA NGAY</p></button>
                 <button class="btn product__btn__add-cart">
                   <img
                     src="assets/icon/cart-plus-white.svg"
@@ -1088,7 +1109,7 @@
                 <li class="product__color--white" data-index="1"></li>
               </ul>
               <div class="product__btn">
-                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__buy"><p>MUA NGAY</p></button>
                 <button class="btn product__btn__add-cart">
                   <img
                     src="assets/icon/cart-plus-white.svg"
@@ -1132,7 +1153,7 @@
                 <li class="product__color--white" data-index="1"></li>
               </ul>
               <div class="product__btn">
-                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__buy"><p>MUA NGAY</p></button>
                 <button class="btn product__btn__add-cart">
                   <img
                     src="assets/icon/cart-plus-white.svg"
@@ -1176,7 +1197,7 @@
                 <li class="product__color--white" data-index="1"></li>
               </ul>
               <div class="product__btn">
-                <button class="btn product__btn__buy"><p>BUY NOW</p></button>
+                <button class="btn product__btn__buy"><p>MUA NGAY</p></button>
                 <button class="btn product__btn__add-cart">
                   <img
                     src="assets/icon/cart-plus-white.svg"
@@ -1221,7 +1242,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1295,7 +1316,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1341,7 +1362,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1387,7 +1408,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1433,7 +1454,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1479,7 +1500,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1525,7 +1546,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1571,7 +1592,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1617,7 +1638,7 @@
               </ul>
               <div class="product__btn">
                 <button class="btn product__btn__buy">
-                  <p>BUY NOW</p>
+                  <p>MUA NGAY</p>
                 </button>
                 <button class="btn product__btn__add-cart">
                   <img
@@ -1655,64 +1676,76 @@
         <div class="row list-new">
           <div class="col-12 col-lg-4 new-card">
             <div class="new-card__inner">
-              <div class="new-card__img">
-                <img
-                  src="assets/image/news/news-1.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </div>
-              <div class="new-card__title">
-                <h3>Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam?</h3>
-              </div>
-              <div class="new-card__desc">
-                <p>
-                  Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
-                  Converse...
-                </p>
-              </div>
+              <a href="#">
+                <div class="new-card__img">
+                  <img
+                    src="assets/image/news/news-1.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="new-card__title">
+                  <h3>
+                    Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
+                  </h3>
+                </div>
+                <div class="new-card__desc">
+                  <p>
+                    Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
+                    của Converse...
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
 
           <div class="col-12 col-lg-4 new-card">
             <div class="new-card__inner">
-              <div class="new-card__img">
-                <img
-                  src="assets/image/news/news-1.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </div>
-              <div class="new-card__title">
-                <h3>Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam?</h3>
-              </div>
-              <div class="new-card__desc">
-                <p>
-                  Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
-                  Converse...
-                </p>
-              </div>
+              <a href="#">
+                <div class="new-card__img">
+                  <img
+                    src="assets/image/news/news-1.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="new-card__title">
+                  <h3>
+                    Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
+                  </h3>
+                </div>
+                <div class="new-card__desc">
+                  <p>
+                    Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
+                    của Converse...
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
 
           <div class="col-12 col-lg-4 new-card">
             <div class="new-card__inner">
-              <div class="new-card__img">
-                <img
-                  src="assets/image/news/news-1.jpg"
-                  alt=""
-                  class="img-fluid"
-                />
-              </div>
-              <div class="new-card__title">
-                <h3>Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam?</h3>
-              </div>
-              <div class="new-card__desc">
-                <p>
-                  Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
-                  Converse...
-                </p>
-              </div>
+              <a href="#">
+                <div class="new-card__img">
+                  <img
+                    src="assets/image/news/news-1.jpg"
+                    alt=""
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="new-card__title">
+                  <h3>
+                    Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
+                  </h3>
+                </div>
+                <div class="new-card__desc">
+                  <p>
+                    Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
+                    của Converse...
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -1737,7 +1770,7 @@
                 Đăng ký nhận bản tin của MQ để cập nhật những sản phẩm mới, nhận
                 thông tin ưu đãi đặc biệt và thông tin giảm giá khác.
               </p>
-              <form action="">
+              <form action="" id="form-subscribe">
                 <input type="text" placeholder="Nhập email của bạn" />
                 <button class="btn btn--lg">GỬI</button>
               </form>
@@ -1855,6 +1888,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>

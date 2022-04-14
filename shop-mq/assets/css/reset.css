@@ -1,0 +1,124 @@
+*,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #fffbf3;
+}
+html {
+  font-family: "Open Sans", sans-serif !important;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+:root {
+  --primary--color-1: #0d0e0e;
+  --primary--color-2: #626262;
+  --primary--color-3: #a9a9a9;
+  --primary--color-4: #fff;
+  --primary--color-5: #cacaca;
+  --secondary-color-1: #b71811;
+  --secondary-color-2: #dc2f18;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+input {
+  line-height: normal;
+}
+label,
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+img {
+  /* display: block;  */
+  width: 100%;
+}
+/* all */
+h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
+h2 {
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  color: var(--primary--color-1);
+}
+h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}
+p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: var(--primary--color-1);
+}
+a {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+  color: var(--secondary-color-1);
+}
+a:hover {
+  color: var(--secondary-color-1);
+  text-decoration: underline;
+}
+span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+section {
+  margin: 6.25rem 0rem;
+  position: relative;
+}
+i {
+  font-size: 1.5rem;
+}
+
+
+.btn {
+  font-size: 0.875rem;
+  color: var(--primary--color-4);
+  background-color: var(--secondary-color-1);
+  outline: none;
+  border: none;
+  border-radius: 0;
+  font-style: normal;
+}
+.btn:hover {
+  text-decoration: none;
+  color: var(--primary--color-1);
+  background-color: var(--primary--color-4);
+  outline: 1px solid var(--secondary-color-1);
+}
+.btn--lg {
+  padding: 1.25rem 2.5rem;
+  /* min-width: 9rem; */
+}
+.btn--s {
+  padding: 0.875rem 1.75rem;
+  /* min-width: 6.25rem; */
+}

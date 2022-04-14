@@ -1,0 +1,61 @@
+footer {
+  background-color: var(--primary--color-1);
+  padding: 3rem 0;
+}
+.footer-item__title {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.footer-item__title::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 5px;
+  left: 0;
+  bottom: -1.5rem;
+  background-color: var(--secondary-color-1);
+}
+footer p,
+footer a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: #fff;
+}
+footer h2,
+footer i {
+  color: #fff;
+}
+.footer-main {
+  margin-bottom: 5rem;
+}
+.footer-end {
+  position: relative;
+}
+.footer-end::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary--color-4);
+}
+.footer-item__social a img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.footer-end {
+  display: flex;
+  justify-content: end;
+}
+.footer-end a:nth-child(2) {
+  margin: 0 2.1rem;
+}
+@media (max-width: 992px) {
+  /*  khoang cach item footer */
+  .footer-item {
+    margin-bottom: 1.25rem;
+  }
+}

@@ -1,0 +1,95 @@
+@import "reset.css";
+/* ------------------------------------------------------- */
+/* header */
+@import "header.css";
+/* ------------------------------------------------------- */
+/* footer */
+@import "footer.css";
+/* ------------------------------------------------------- */
+/* nav-breadcrumb */
+.nav-breadcrumb {
+  margin-top: 130px;
+  margin-bottom: 20px;
+}
+.breadcrumb__item--active {
+  display: inline;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--primary--color-1);
+}
+ul.breadcrumb li + li:before {
+  padding: 0.5rem;
+  color: var(--primary--color-2);
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: var(--primary--color-2);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+/* ------------------------------------------------------- */
+/* contact-info */
+#contact {
+  margin: 20px 0 0 0;
+}
+.contact-info__title {
+  margin-bottom: 1.5rem;
+}
+.contact-info__item {
+  margin-bottom: 0.625rem;
+}
+.contact-info__item a {
+  color: var(--primary--color-1);
+  display: flex;
+}
+.contact-info__item a p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.contact-info__item a:hover {
+  text-decoration: none;
+  color: var(--secondary-color-1);
+}
+.contact-info__item a:hover p {
+  text-decoration: none;
+  color: var(--secondary-color-1);
+}
+.contact-info__item a i {
+  margin-right: 0.625rem;
+}
+.contact-info__social a img {
+  width: 3rem;
+  height: 3rem;
+}
+/* ------------------------------------------------------- */
+/* contact-form */
+.contact-form__input input,
+.contact-form__input textarea{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 0.4rem;
+}
+.contact-form__btn{
+    margin-top: 1rem;
+    text-align: center;
+}
+.contact-map{
+    margin-top: 3rem;
+}
+.contact-map iframe{
+    width: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+}

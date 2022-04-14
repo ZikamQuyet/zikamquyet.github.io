@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/regular.min.css"
+      integrity="sha512-YoxvmIzlVlt4nYJ6QwBqDzFc+2aXL7yQwkAuscf2ZAg7daNQxlgQHV+LLRHnRXFWPHRvXhJuBBjQqHAqRFkcVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/gio-hang.css" />
+
+    <link
+      rel="shortcut icon"
+      href="assets/image/logo-mq-dark.png"
+      type="image/x-icon"
+    />
+
+    <title>Giỏ hàng</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="container-fluid p-0 header-top">
+        <div class="container header-top__wrapper">
+          <div class="row align-items-center">
+            <div class="col-3 col-lg-0 nav-mobile__icon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="col-6 col-lg-3 header-top__logo-img">
+              <a href="index.html" class="text-center">
+                <img
+                  src="assets/image/logo-mq-light.png"
+                  alt=""
+                  class="text-center"
+                />
+              </a>
+            </div>
+
+            <div class="col-lg-6 header__search-input">
+              <input type="text" placeholder="Tìm kiếm..." />
+            </div>
+
+            <div class="col-3 col-lg-3 header__account-search-cart">
+              <!-- search mobile -->
+              <div class="header__search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div class="header__search-container">
+                  <div class="header__search-input">
+                    <input type="text" placeholder="Tìm kiếm..." />
+                  </div>
+                </div>
+              </div>
+              <div class="header__account">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <div class="header__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="cart-info">
+                  <div class="cart-info__wrapper">
+                    <div class="cart-info__item">
+                      <div class="cart__product-img">
+                        <a href=""
+                          ><img
+                            src="assets/image/chuck-70/Chuck 70 Crafted Canvas-1.jpg"
+                            alt="sp1"
+                        /></a>
+                      </div>
+                      <div class="cart__product-desc">
+                        <a class="cart__product-name">
+                          Archive Print Chuck Taylor All Star
+                        </a>
+                        <p class="cart__product-price">1 x 1,250,000 đ</p>
+                      </div>
+                      <div class="cart__product-delete">
+                        <i class="fa-solid fa-xmark"></i>
+                      </div>
+                    </div>
+
+                    <div class="cart-total-price">
+                      <p>Tổng: 2,500,000 đ</p>
+                    </div>
+
+                    <div class="cart-btn">
+                      <a href="#" class="btn btn--s">Xem giỏ hàng</a>
+                      <a href="thanh-toan.html" class="btn btn--s"
+                        >Thanh toán</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- mobile -->
+        <!-- menu hiện ẩn mobile với class nav-mobile-main--active -->
+        <div class="nav-mobile-main">
+          <div class="nav-mobile-main__wrapper">
+            <!-- đăng nhập mobile -->
+            <div class="header__account">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            <!-- menu mobile -->
+            <ul class="nav">
+              <li class="nav__item nav__home">
+                <a href="index.html">Trang chủ</a>
+              </li>
+              <li class="nav__item nav__products--boy">
+                <a href="#">Nam <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="nav-child nav-child__boy">
+                  <li class="nav-child__item">
+                    <a href="#">Chuck 70</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Classic Chuck</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Skateboarding</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item nav__products--girl">
+                <a href="">Nữ <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="nav-child nav-child__girl">
+                  <li class="nav-child__item">
+                    <a href="#">Chuck 70</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Classic Chuck</a>
+                  </li>
+                  <li class="nav-child__item">
+                    <a href="#">Skateboarding</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item nav__products">
+                <a href="">Sản phẩm</a>
+              </li>
+              <li class="nav__item nav__news">
+                <a href="tin-tuc.html">Tin tức</a>
+              </li>
+              <li class="nav__item nav__contact">
+                <a href="">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid p-0 header-bottom">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 header-bottom__nav">
+              <ul class="nav justify-content-center">
+                <li class="nav__item nav__home">
+                  <a href="index.html">Trang chủ</a>
+                </li>
+                <li class="nav__item nav__products--boy">
+                  <a href="#">Nam <i class="fa-solid fa-angle-down"></i></a>
+                  <ul class="nav-child nav-child__boy">
+                    <li class="nav-child__item">
+                      <a href="#">Chuck 70</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Classic Chuck</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Skateboarding</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item nav__products--girl">
+                  <a href="">Nữ <i class="fa-solid fa-angle-down"></i></a>
+                  <ul class="nav-child nav-child__girl">
+                    <li class="nav-child__item">
+                      <a href="#">Chuck 70</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Classic Chuck</a>
+                    </li>
+                    <li class="nav-child__item">
+                      <a href="#">Skateboarding</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav__item nav__products">
+                  <a href="">Sản phẩm</a>
+                </li>
+                <li class="nav__item nav__news">
+                  <a href="tin-tuc.html">Tin tức</a>
+                </li>
+                <li class="nav__item nav__contact">
+                  <a href="">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal đăng nhập -->
+      <!-- active modal = class modal--active -->
+      <div class="modal-user modal-login">
+        <div class="modal__wrapper">
+          <div class="modal__title">
+            <h1>ĐĂNG NHẬP</h1>
+          </div>
+          <form action="" id="form-login">
+            <div class="modal__input">
+              <label for="email"><p>Email *</p> </label>
+              <input type="email" placeholder="nhập email" id="email" />
+              <small class="input__check input__check--error">
+                <p>Sai email...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="password"><p>Mật khẩu *</p></label>
+              <input type="password" placeholder="nhập email" id="password" />
+              <small class="input__check input__check--error">
+                <p>Sai mật khẩu...</p></small
+              >
+            </div>
+            <div class="forgot-password">
+              <p>Quên mật khẩu?</p>
+            </div>
+            <div class="modal__btn">
+              <button type="submit" class="btn btn--s" id="btn-login">
+                Đăng nhập
+              </button>
+            </div>
+          </form>
+          <div class="login-with">
+            <p>Hoặc đăng nhập với</p>
+            <ul class="social">
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_google_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="register-login register">
+            <p>Bạn chưa có tài khoản? <span href="">Đăng ký ngay</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal đăng ký -->
+      <!-- active modal = class modal--active -->
+      <div class="modal-user modal-sign-in">
+        <div class="modal__wrapper">
+          <div class="modal__title">
+            <h1>ĐĂNG KÝ</h1>
+          </div>
+          <form action="" id="form-register">
+            <div class="modal__input">
+              <label for="name"><p>Họ tên *</p> </label>
+              <input type="text" placeholder="Nhập họ tên" id="name" />
+              <small class="input__check input__check--error">
+                <p>Không bỏ trống...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="email"><p>Email *</p> </label>
+              <input type="email" placeholder="Nhập email" id="email" />
+              <small class="input__check input__check--error">
+                <p>Sai email...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="phone"><p>SĐT *</p> </label>
+              <input type="text" placeholder="Nhập SĐT" id="phone" />
+              <small class="input__check input__check--error">
+                <p>Sai SĐT...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="password"><p>Mật khẩu *</p></label>
+              <input
+                type="password"
+                placeholder="Nhập mật khẩu"
+                id="password"
+              />
+              <small class="input__check input__check--error">
+                <p>Sai mật khẩu...</p></small
+              >
+            </div>
+            <div class="modal__input">
+              <label for="retype-password"><p>Xác nhận mật khẩu *</p></label>
+              <input
+                type="password"
+                placeholder="Nhập lại mật khẩu"
+                id="retype-password"
+              />
+              <small class="input__check input__check--error">
+                <p>Sai mật khẩu...</p></small
+              >
+            </div>
+            <div class="modal__btn">
+              <button type="submit" class="btn btn--s" id="btn-login">
+                Đăng ký
+              </button>
+            </div>
+          </form>
+          <div class="login-with">
+            <p>Hoặc đăng nhập với</p>
+            <ul class="social">
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_google_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="register-login login">
+            <p>Bạn đã có tài khoản? <span href="#">Đăng nhập ngay</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quên mật khẩu -->
+      <!-- active modal = class modal--active -->
+      <div class="modal-user modal-forgot-password">
+        <div class="modal__wrapper">
+          <div class="modal__title">
+            <h1>Lấy lại mật khẩu</h1>
+          </div>
+          <form action="" id="form-forgot-password">
+            <div class="modal__input">
+              <label for="emai-sdt"><p>Email/SĐT *</p> </label>
+              <input type="text" placeholder="Nhập email/SĐT" id="emai-sdt" />
+              <small class="input__check input__check--error">
+                <p>Không bỏ trống...</p></small
+              >
+            </div>
+            <div class="modal__btn">
+              <button type="submit" class="btn btn--s" id="btn-login">
+                Gửi
+              </button>
+            </div>
+          </form>
+          <div class="login-with">
+            <p>Hoặc đăng nhập với</p>
+            <ul class="social">
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_facebook_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_google_48px.svg" alt=""
+                /></a>
+              </li>
+              <li class="social__item">
+                <a href="#"
+                  ><img src="assets/icon/icons8_Zalo_48px.svg" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="register-login login">
+            <p>Bạn đã có tài khoản? <span href="#">Đăng nhập ngay</span></p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nav-breadcrumb -->
+    <div class="nav-breadcrumb container">
+      <ul class="breadcrumb">
+        <li class="breadcrumb__item"><a href="index.html">Trang chủ</a></li>
+        <li class="breadcrumb__item breadcrumb__item--active">Giỏ hàng</li>
+      </ul>
+    </div>
+
+    <section id="cart">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-12 col-lg-8">
+            <form action="" class="cart-form">
+              <div class="cart-wrapper">
+                <table class="cart-table" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th class="product-name" colspan="3">SẢN PHẨM</th>
+                      <th class="product-price">GIÁ</th>
+                      <th class="product-quantity">SỐ LƯỢNG</th>
+                      <th class="product-subtotal text-end">TỔNG</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- cart-form__cart-item 1 -->
+                    <tr class="cart-form__cart-item">
+                      <td class="product-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                      </td>
+
+                      <td class="product-thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/image/chuck-70/Chuck 70 Crafted Canvas-1.jpg"
+                            alt=""
+                            class="img-fluid"
+                        /></a>
+                      </td>
+
+                      <td class="product-name" data-title="Sản phẩm">
+                        <a href="#">Chuck 70 Psy-Kicks Ox</a>
+                        <div class="mobile-product-price">
+                          <span class="mobile-product-price__qty">1 x </span>
+                          <span class="price-amount"
+                            >1,800,000&nbsp;
+                            <span class="price-currency-symbol">₫</span></span
+                          >
+                        </div>
+                      </td>
+                      <td class="product-price" data-title="Giá">
+                        <span class="price-amount"
+                          >1,800,000&nbsp;
+                          <span class="price-currency-symbol">₫</span></span
+                        >
+                      </td>
+
+                      <td class="product-quantity" data-title="Số lượng">
+                        <div class="quantity">
+                          <!-- <button class="btn--down">-</button> -->
+                          <input type="button" value="-" class="btn--down" />
+                          <input
+                            type="number"
+                            id="number-product"
+                            class="input-text-number-product"
+                            step="1"
+                            min="0"
+                            max="9999"
+                            value="1"
+                            title="SL"
+                            size="4"
+                            pattern="[0-9]*"
+                            inputmode="numeric"
+                          />
+                          <input type="button" value="+" class="btn--up" />
+                        </div>
+                      </td>
+
+                      <td class="product-subtotal" data-title="Tổng">
+                        <span class="price-amount"
+                          >1,800,000&nbsp;<span class="price-currency-symbol"
+                            >₫</span
+                          ></span
+                        >
+                      </td>
+                    </tr>
+                    <!-- cart-form__cart-item 2 -->
+                    <tr class="cart-form__cart-item">
+                      <td class="product-remove">
+                        <i class="fa-solid fa-xmark"></i>
+                      </td>
+
+                      <td class="product-thumbnail">
+                        <a href="#"
+                          ><img
+                            src="assets/image/chuck-70/Chuck 70 Crafted Canvas-1.jpg"
+                            alt=""
+                            class="img-fluid"
+                        /></a>
+                      </td>
+
+                      <td class="product-name" data-title="Sản phẩm">
+                        <a href="#">Chuck 70 Psy-Kicks Ox</a>
+                        <div class="mobile-product-price">
+                          <span class="mobile-product-price__qty">1 x </span>
+                          <span class="price-amount"
+                            >1,800,000&nbsp;
+                            <span class="price-currency-symbol">₫</span></span
+                          >
+                        </div>
+                      </td>
+                      <td class="product-price" data-title="Giá">
+                        <span class="price-amount"
+                          >1,800,000&nbsp;
+                          <span class="price-currency-symbol">₫</span></span
+                        >
+                      </td>
+
+                      <td class="product-quantity" data-title="Số lượng">
+                        <div class="quantity">
+                          <!-- <button class="btn--down">-</button> -->
+                          <input type="button" value="-" class="btn--down" />
+                          <input
+                            type="number"
+                            id="number-product"
+                            class="input-text-number-product"
+                            step="1"
+                            min="0"
+                            max="9999"
+                            value="1"
+                            title="SL"
+                            size="4"
+                            pattern="[0-9]*"
+                            inputmode="numeric"
+                          />
+                          <input type="button" value="+" class="btn--up" />
+                        </div>
+                      </td>
+
+                      <td class="product-subtotal" data-title="Tổng">
+                        <span class="price-amount"
+                          >1,800,000&nbsp;<span class="price-currency-symbol"
+                            >₫</span
+                          ></span
+                        >
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="6" class="actions clear">
+                        <div class="continue-shopping">
+                          <a
+                            class="button-continue-shopping btn btn--s"
+                            href="#"
+                          >
+                            ← Tiếp tục xem sản phẩm
+                          </a>
+                        </div>
+
+                        <button
+                          type="submit"
+                          class="btn-update-cart btn btn--s"
+                          name="update_cart"
+                          value="Cập nhật giỏ hàng"
+                          disabled=""
+                        >
+                          Cập nhật giỏ hàng
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-12 col-lg-4">
+            <div class="cart-total-wrapper">
+              <table class="cart-total-table" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th class="product-name" colspan="2">THÔNG TIN ĐƠN HÀNG</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr class="cart-total__item total-price-amount">
+                    <td>Tổng tiền hàng</td>
+                    <td class="text-end">
+                      <span class="price-amount"
+                        >1,800,000&nbsp;<span class="price-currency-symbol"
+                          >₫</span
+                        ></span
+                      >
+                    </td>
+                  </tr>
+
+                  <tr class="cart-total__item total-transport-fee">
+                    <td>Phí vận chuyển</td>
+                    <td class="text-end">Miễn phí</td>
+                  </tr>
+
+                  <tr class="cart-total__item total-discount-code">
+                    <td>Mã giảm giá</td>
+                    <td class="text-end">
+                      <input
+                        type="text"
+                        placeholder="Nhập mã giảm giá"
+                        class="text-end"
+                      />
+                    </td>
+                  </tr>
+
+                  <tr class="cart-total__item total-discount">
+                    <td>Giảm giá</td>
+                    <td class="text-end">
+                      <span class="price-amount"
+                        >0&nbsp;<span class="price-currency-symbol"
+                          >₫</span
+                        ></span
+                      >
+                    </td>
+                  </tr>
+
+                  <tr class="cart-total__item all-total-price-amount">
+                    <td>Tổng tiền thanh toán</td>
+                    <td class="text-end">
+                      <span class="price-amount"
+                        >1,800,000&nbsp;<span class="price-currency-symbol"
+                          >₫</span
+                        ></span
+                      >
+                    </td>
+                  </tr>
+
+                  <tr class="btn-payment">
+                    <td colspan="2" class="text-center">
+                      <a href="thanh-toan.html" class="btn btn--s"
+                        >Thanh toán</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="row footer-main">
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>GIỚI THIỆU</h2></div>
+            <div class="footer-item__desc">
+              <p>
+                Chào mừng bạn đến với ngôi nhà Converse! Tại đây, mỗi một dòng
+                chữ, mỗi chi tiết và hình ảnh đều là những bằng chứng mang dấu
+                ấn lịch sử Converse 100 năm, và đang không ngừng phát triển lớn
+                mạnh. />
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>ĐỊA CHỈ</h2></div>
+            <div class="footer-item__desc">
+              <div class="row align-items-center">
+                <div class="col-2">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="col-10">
+                  <p>319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</p>
+                </div>
+
+                <div class="col-2">
+                  <i class="fa-solid fa-phone-flip"></i>
+                </div>
+                <div class="col-10 my-3">
+                  <p>012 345 6789</p>
+                </div>
+
+                <div class="col-2">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="col-10">
+                  <p>mq.converse@gmail.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>Chính sách hỗ trợ</h2></div>
+            <div class="footer-item__desc">
+              <ul>
+                <li><a href="">Chính sách đổi sản phẩm</a></li>
+                <li><a href="">Chính sách trả góp</a></li>
+                <li><a href="">Chính sách bảo hành</a></li>
+                <li><a href="">Chính sách giao hàng</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-3 footer-item">
+            <div class="footer-item__title"><h2>MẠNG XÃ HỘI</h2></div>
+            <div class="footer-item__social">
+              <a href=""
+                ><img src="assets/icon/icons8_facebook_96px.svg" alt=""
+              /></a>
+              <a href=""
+                ><img src="assets/icon/icons8_Instagram_96px.svg" alt=""
+              /></a>
+              <a href=""
+                ><img src="assets/icon/icons8_twitter_96px.svg" alt=""
+              /></a>
+              <a href=""
+                ><img src="assets/icon/icons8_pinterest_96px.svg" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-end">
+          <a href="" class="footer-end__link">
+            <img src="assets/icon/icons8_paypal_96px.svg" alt="" />
+          </a>
+
+          <a href="" class="footer-end__link">
+            <img src="assets/icon/icons8_visa_96px.svg" alt="" />
+          </a>
+
+          <a href="" class="footer-end__link" class="text-end">
+            <img src="assets/icon/icons8_mastercard_96px.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
