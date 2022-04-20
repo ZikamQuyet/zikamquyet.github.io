@@ -37,7 +37,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
-    <link rel="stylesheet" href="assets/css/lien-he.css" />
+    <link rel="stylesheet" href="assets/css/san-pham.css" />
 
     <link
       rel="shortcut icon"
@@ -214,14 +214,14 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav__item nav__products">
+                <li class="nav__item nav__products nav__item--active">
                   <a href="">Sản phẩm</a>
                 </li>
                 <li class="nav__item nav__news">
                   <a href="tin-tuc.html">Tin tức</a>
                 </li>
-                <li class="nav__item nav__contact nav__item--active">
-                  <a href="">Liên hệ</a>
+                <li class="nav__item nav__contact">
+                  <a href="lien-he.html">Liên hệ</a>
                 </li>
               </ul>
             </div>
@@ -424,7 +424,827 @@
       </ul>
     </div>
 
-    
+    <section id="collection">
+      <div class="container">
+        <div class="row">
+          <!-- filter -->
+          <div class="col-8 col-lg-3 filter">
+            <div class="wrap-filter">
+              <!-- danh mục -->
+              <div class="group-collection" aria-expanded="true">
+                <div class="title-block dropdown-filter">
+                  <h3 class="title-group">Danh mục nhóm</h3>
+                  <i class="fa-solid fa-minus"></i>
+                  <!-- <i class="fa-solid fa-plus"></i> -->
+                </div>
+                <div class="filter-box filter-box--active" id="filter-category">
+                  <ul id="menusidebarleft" class="menu-collection">
+                    <li class="menu-collection--active">
+                      <a href="#" title="all-products">Tất cả sản phẩm</a>
+                    </li>
+
+                    <li class="">
+                      <a href="#" title="new-products">Sản phẩm mới</a>
+                    </li>
+
+                    <li class="">
+                      <a href="#" title="discount-products"
+                        >Sản phẩm giảm giá</a
+                      >
+                    </li>
+
+                    <li class="">
+                      <a href="#" title="Selling products">Sản phẩm bán chạy</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Thương hiệu -->
+              <div class="group-collection" aria-expanded="false">
+                <div class="title-block dropdown-filter">
+                  <h3 class="title-group">Thương hiệu</h3>
+                  <i class="fa fa-minus"></i>
+                  <!-- <i
+                    class="fa fa-minus flexbox-grid-default flexbox-justifyContent-center flexbox-alignItems-center"
+                    aria-hidden="true"
+                  ></i> -->
+                </div>
+                <div class="filter-box filter-box--active" id="filter-vendor">
+                  <ul>
+                    <li>
+                      <label data-filter="chuck-70" class="chuck-70">
+                        <input type="checkbox" value="" />
+                        <span class="checkmark"></span>
+                        Chuck 70
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="classic-chuck" class="classic-chuck">
+                        <input type="checkbox" value="" />
+                        <span class="checkmark"></span>
+                        Classic Chuck
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="skateboarding" class="skateboarding">
+                        <input type="checkbox" value="" />
+                        <span class="checkmark"></span>
+                        Skateboarding
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Giá -->
+              <div class="group-collection" aria-expanded="false">
+                <div class="title-block dropdown-filter">
+                  <h3 class="title-group">Giá</h3>
+                  <i class="fa fa-minus"></i>
+                  <!-- <i
+                    class="fa fa-minus flexbox-grid-default flexbox-justifyContent-center flexbox-alignItems-center"
+                    aria-hidden="true"
+                  ></i> -->
+                </div>
+                <div class="filter-box filter-box--active" id="filter-price">
+                  <ul>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="price-filter"
+                          data-price="0:1000000"
+                          value="((price:product<1000000))"
+                        />
+                        <span class="checkmark"></span>
+                        Nhỏ hơn 1,000,000₫
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="price-filter"
+                          data-price="1000000:2000000"
+                          value="((price:product>=1000000)&amp;&amp;(price:product<2000000))"
+                        />
+                        <span class="checkmark"></span>
+                        Từ 1,000,000₫ - 2,000,000₫
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="price-filter"
+                          data-price="2000000:3000000"
+                          value="((price:product>=2000000)&amp;&amp;(price:product<3000000))"
+                        />
+                        <span class="checkmark"></span>
+                        Từ 2,000,000₫ - 3,000,000₫
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="price-filter"
+                          data-price="3000000:4000000"
+                          value="((price:product>=3000000)&amp;&amp;(price:product<4000000))"
+                        />
+                        <span class="checkmark"></span>
+                        Từ 3,000,000₫ - 4,000,000₫
+                      </label>
+                    </li>
+                    <li>
+                      <label>
+                        <input
+                          type="radio"
+                          name="price-filter"
+                          data-price="4000000:max"
+                          value="((price:product>=4000000))"
+                        />
+                        <span class="checkmark"></span>
+                        Lớn hơn 4,000,000₫
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- màu sắc -->
+              <div class="group-collection" aria-expanded="false">
+                <div class="title-block dropdown-filter">
+                  <h3 class="title-group">Màu sắc</h3>
+                  <i class="fa fa-minus"></i>
+                  <!-- <i
+                    class="fa fa-minus flexbox-grid-default flexbox-justifyContent-center flexbox-alignItems-center"
+                    aria-hidden="true"
+                  ></i> -->
+                </div>
+                <div class="filter-box filter-box--active" id="filter-color">
+                  <ul>
+                    <li>
+                      <label style="background: #ffffff" class="first-color">
+                        <input
+                          type="checkbox"
+                          value="(variant:product**Trắng)"
+                        />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label
+                        style="background: #000000"
+                        class="filter-color--active"
+                      >
+                        <input type="checkbox" value="(variant:product**Đen)" />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #f44336">
+                        <input type="checkbox" value="(variant:product**Đỏ)" />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #f06292">
+                        <input
+                          type="checkbox"
+                          value="(variant:product**Hồng)"
+                        />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #9c27b0">
+                        <input type="checkbox" value="(variant:product**Tím)" />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #2196f3">
+                        <input
+                          type="checkbox"
+                          value="(variant:product**Xanh)"
+                        />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #3f51b5">
+                        <input
+                          type="checkbox"
+                          value="(variant:product**Xanh Dương)"
+                        />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #4caf50">
+                        <input
+                          type="checkbox"
+                          value="(variant:product**Xanh Lá)"
+                        />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #ffb74d">
+                        <input type="checkbox" value="(variant:product**Cam)" />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #cfd8dc">
+                        <input type="checkbox" value="(variant:product**Xám)" />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #8d6e63">
+                        <input type="checkbox" value="(variant:product**Nâu)" />
+                      </label>
+                    </li>
+
+                    <li>
+                      <label style="background: #ffee58">
+                        <input
+                          type="checkbox"
+                          value="(variant:product**Vàng)"
+                        />
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Kích thức -->
+              <div class="group-collection" aria-expanded="true">
+                <div class="title-block dropdown-filter">
+                  <h3 class="title-group">Kích thước</h3>
+                  <i class="fa fa-minus"></i>
+                  <!-- <i
+                    class="fa fa-minus flexbox-grid-default flexbox-justifyContent-center flexbox-alignItems-center"
+                    aria-hidden="true"
+                  ></i> -->
+                </div>
+                <div class="filter-box filter-box--active" id="filter-size">
+                  <ul class="filter-size">
+                    <li>
+                      <label data-filter="35" class="35">
+                        <input type="checkbox" value="(variant:product**35)" />
+                        <span class="checkmark"></span>
+                        35
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="36" class="36">
+                        <input type="checkbox" value="(variant:product**36)" />
+                        <span class="checkmark"></span>
+                        36
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="37" class="37">
+                        <input type="checkbox" value="(variant:product**37)" />
+                        <span class="checkmark"></span>
+                        37
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="38" class="38">
+                        <input type="checkbox" value="(variant:product**38)" />
+                        <span class="checkmark"></span>
+                        38
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="39" class="39">
+                        <input type="checkbox" value="(variant:product**39)" />
+                        <span class="checkmark"></span>
+                        39
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="40" class="40">
+                        <input type="checkbox" value="(variant:product**40)" />
+                        <span class="checkmark"></span>
+                        40
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="41" class="41">
+                        <input type="checkbox" value="(variant:product**41)" />
+                        <span class="checkmark"></span>
+                        41
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="42" class="42">
+                        <input type="checkbox" value="(variant:product**42)" />
+                        <span class="checkmark"></span>
+                        42
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="43" class="43">
+                        <input type="checkbox" value="(variant:product**43)" />
+                        <span class="checkmark"></span>
+                        43
+                      </label>
+                    </li>
+
+                    <li>
+                      <label data-filter="44" class="44">
+                        <input type="checkbox" value="(variant:product**44)" />
+                        <span class="checkmark"></span>
+                        44
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- products -->
+          <div class="col-12 col-lg-9">
+            <div class="group-collection">
+              <div class="title-block">
+                <div class="btn-filter btn btn--s my-2">
+                  <i class="fa-solid fa-filter"></i>
+                </div>
+                <h3 class="title-group title-group-product text-start">
+                  Tất cả sản phẩm
+                </h3>
+                <div class="browse-tags text-end">
+                  <span>Sắp xếp theo:</span>
+                  <span class="custom-dropdown custom-dropdown--white">
+                    <select class="sort-by">
+                      <option value="manual">Mặc định</option>
+                      <option value="price-ascending">Giá: Tăng dần</option>
+                      <option value="price-descending">Giá: Giảm dần</option>
+                      <option value="title-ascending">Tên: A-Z</option>
+                      <option value="title-descending">Tên: Z-A</option>
+                    </select>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="products row">
+              <!-- product-card-1 -->
+              <div class="product__card col-6 col-lg-4">
+                <div class="product__card__img">
+                  <a href="#">
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star-1.jpg"
+                      alt=""
+                      class="img-fluid img--front"
+                    />
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star-1-c.jpg"
+                      alt=""
+                      class="img-fluid img--back"
+                    />
+                  </a>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>MUA NGAY</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <a href=""
+                    ><span> Canvas Platform Chuck Taylor All Star </span></a
+                  >
+                </div>
+                <div class="product__card__price">
+                  <span class="price-amount"
+                    >1,800,000&nbsp;
+                    <span class="price-currency-symbol">₫</span></span
+                  >
+                </div>
+                <ul class="product__colors">
+                  <li>
+                    <label
+                      for=""
+                      class="product-color__item"
+                      style="background-color: #fff"
+                    >
+                      <input
+                        type="radio"
+                        name="product-color-filter"
+                        data-color="0"
+                      />
+                    </label>
+                  </li>
+                  <li>
+                    <label
+                      for=""
+                      class="product-color__item product-color__item--active"
+                      style="background-color: #000"
+                    >
+                      <input
+                        type="radio"
+                        name="product-color-filter"
+                        data-color="2"
+                        checked
+                      />
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <!-- product-card-2 -->
+              <div class="product__card col-6 col-lg-4">
+                <div class="product__card__img">
+                  <a href="#">
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star-2.jpg"
+                      alt=""
+                      class="img-fluid img--front"
+                    />
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star-2-c.jpg"
+                      alt=""
+                      class="img-fluid img--back"
+                    />
+                  </a>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>MUA NGAY</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <a href=""
+                    ><span> Canvas Platform Chuck Taylor All Star </span></a
+                  >
+                </div>
+                <div class="product__card__price">
+                  <span class="price-amount"
+                    >1,800,000&nbsp;
+                    <span class="price-currency-symbol">₫</span></span
+                  >
+                </div>
+                <ul class="product__colors">
+                  <li
+                    class="product-color__item"
+                    style="background-color: #fff"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="0"
+                    />
+                  </li>
+                  <li
+                    class="product-color__item product-color__item--active"
+                    style="background-color: #000"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="2"
+                      checked
+                    />
+                  </li>
+                </ul>
+              </div>
+              <!-- product-card-3 -->
+              <div class="product__card col-6 col-lg-4">
+                <div class="product__card__img">
+                  <a href="#">
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star-4.jpg"
+                      alt=""
+                      class="img-fluid img--front"
+                    />
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star-4-c.jpg"
+                      alt=""
+                      class="img-fluid img--back"
+                    />
+                  </a>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>MUA NGAY</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <a href=""
+                    ><span> Canvas Platform Chuck Taylor All Star </span></a
+                  >
+                </div>
+                <div class="product__card__price">
+                  <span class="price-amount"
+                    >1,800,000&nbsp;
+                    <span class="price-currency-symbol">₫</span></span
+                  >
+                </div>
+                <ul class="product__colors">
+                  <li
+                    class="product-color__item"
+                    style="background-color: #fff"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="0"
+                    />
+                  </li>
+                  <li
+                    class="product-color__item product-color__item--active"
+                    style="background-color: #000"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="2"
+                      checked
+                    />
+                  </li>
+                </ul>
+              </div>
+              <!-- product-card-4 -->
+              <div class="product__card col-6 col-lg-4">
+                <div class="product__card__img">
+                  <a href="#">
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1.jpg"
+                      alt=""
+                      class="img-fluid img--front"
+                    />
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star Archive Camo-1-c.jpg"
+                      alt=""
+                      class="img-fluid img--back"
+                    />
+                  </a>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>MUA NGAY</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <a href=""
+                    ><span> Canvas Platform Chuck Taylor All Star </span></a
+                  >
+                </div>
+                <div class="product__card__price">
+                  <span class="price-amount"
+                    >1,800,000&nbsp;
+                    <span class="price-currency-symbol">₫</span></span
+                  >
+                </div>
+                <ul class="product__colors">
+                  <li
+                    class="product-color__item"
+                    style="background-color: #fff"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="0"
+                    />
+                  </li>
+                  <li
+                    class="product-color__item product-color__item--active"
+                    style="background-color: #000"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="2"
+                      checked
+                    />
+                  </li>
+                </ul>
+              </div>
+              <!-- product-card-5 -->
+              <div class="product__card col-6 col-lg-4">
+                <div class="product__card__img">
+                  <a href="#">
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1.jpg"
+                      alt=""
+                      class="img-fluid img--front"
+                    />
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-1-c.jpg"
+                      alt=""
+                      class="img-fluid img--back"
+                    />
+                  </a>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>MUA NGAY</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <a href=""
+                    ><span> Canvas Platform Chuck Taylor All Star </span></a
+                  >
+                </div>
+                <div class="product__card__price">
+                  <span class="price-amount"
+                    >1,800,000&nbsp;
+                    <span class="price-currency-symbol">₫</span></span
+                  >
+                </div>
+                <ul class="product__colors">
+                  <li
+                    class="product-color__item"
+                    style="background-color: #fff"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="0"
+                    />
+                  </li>
+                  <li
+                    class="product-color__item product-color__item--active"
+                    style="background-color: #000"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="2"
+                      checked
+                    />
+                  </li>
+                </ul>
+              </div>
+              <!-- product-card-6 -->
+              <div class="product__card col-6 col-lg-4">
+                <div class="product__card__img">
+                  <a href="#">
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2.jpg"
+                      alt=""
+                      class="img-fluid img--front"
+                    />
+                    <img
+                      src="assets/image/chuck-classic/Chuck Taylor All Star Dip Dye-2-c.jpg"
+                      alt=""
+                      class="img-fluid img--back"
+                    />
+                  </a>
+                  <div class="product__btn">
+                    <button class="btn product__btn__buy">
+                      <p>MUA NGAY</p>
+                    </button>
+                    <button class="btn product__btn__add-cart">
+                      <img
+                        src="assets/icon/cart-plus-white.svg"
+                        alt=""
+                        class="icon--front"
+                      />
+                      <img
+                        src="assets/icon/cart-plus-black.svg"
+                        alt=""
+                        class="icon--back"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div class="product__card__title">
+                  <a href=""
+                    ><span> Canvas Platform Chuck Taylor All Star </span></a
+                  >
+                </div>
+                <div class="product__card__price">
+                  <span class="price-amount"
+                    >1,800,000&nbsp;
+                    <span class="price-currency-symbol">₫</span></span
+                  >
+                </div>
+                <ul class="product__colors">
+                  <li
+                    class="product-color__item"
+                    style="background-color: #fff"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="0"
+                    />
+                  </li>
+                  <li
+                    class="product-color__item product-color__item--active"
+                    style="background-color: #000"
+                  >
+                    <input
+                      type="radio"
+                      name="product-color-filter"
+                      data-color="2"
+                      checked
+                    />
+                  </li>
+                </ul>
+              </div>
+
+              <!-- pagination  các tab -->
+              <nav
+                aria-label="Page navigation example"
+                class="pagination-wrapper"
+              >
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link"
+                      ><i class="fa-solid fa-angle-left"></i
+                    ></a>
+                  </li>
+                  <li class="page-item page-item--active">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"
+                      ><i class="fa-solid fa-angle-right"></i
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- footer -->
     <footer>
@@ -535,5 +1355,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/san-pham.js"></script>
   </body>
 </html>

@@ -37,7 +37,7 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
-    <link rel="stylesheet" href="assets/css/tin-tuc.css" />
+    <link rel="stylesheet" href="assets/css/chi-tiet-san-pham.css" />
 
     <link
       rel="shortcut icon"
@@ -45,7 +45,7 @@
       type="image/x-icon"
     />
 
-    <title>Tin tức</title>
+    <title>Chi tiết sản phẩm</title>
   </head>
   <body>
     <!-- header -->
@@ -422,278 +422,158 @@
     <div class="nav-breadcrumb container">
       <ul class="breadcrumb">
         <li class="breadcrumb__item"><a href="#">Trang chủ</a></li>
-        <li class="breadcrumb__item breadcrumb__item--active">Tin tức</li>
+        <li class="breadcrumb__item"><a href="#">Sản phẩm</a></li>
+        <li class="breadcrumb__item breadcrumb__item--active">Tên sản phẩm</li>
       </ul>
     </div>
 
-    <section id="news">
+    <section id="product">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-9">
-            <div class="list-new row">
-              <!-- new 1 -->
-              <div class="new-card col-6 col-lg-4">
-                <div class="new-card__inner">
-                  <a href="#">
-                    <div class="new-card__img">
-                      <img
-                        src="assets/image/news/news-1.jpg"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="new-card__title">
-                      <h3>
-                        Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
-                      </h3>
-                    </div>
-                    <div class="new-card__desc">
-                      <p>
-                        Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
-                        của Converse...
-                      </p>
-                    </div>
-                  </a>
+        <div id="comments" class="comments-area">
+          <!-- hiển thị phần comment -->
+          <div
+            id="review"
+            class="review"
+            itemscope=""
+            itemtype=""
+            itemprop="review"
+          >
+            <h3>Bình luận</h3>
+            <div class="review-header">
+              <div>
+                <span class="review-header-byline" itemprop="author"
+                  >Vũ Hoàng Thùy Linh</span
+                >
+                <div
+                  class="product-reviews-star"
+                  data-score="5"
+                  data-number="5"
+                  title="Tuyệt vời"
+                  style="color: rgb(233, 229, 0)"
+                >
+                  <i data-alt="1" class="fa-solid fa-star" title="Rất tệ"></i>
+                  <i
+                    data-alt="2"
+                    class="fa-solid fa-star"
+                    title="Không hài lòng"
+                  ></i>
+                  <i
+                    data-alt="3"
+                    class="fa-solid fa-star"
+                    title="Bình thường"
+                  ></i>
+                  <i data-alt="4" class="fa-solid fa-star" title="Hài lòng"></i>
+                  <i
+                    data-alt="5"
+                    class="fa-solid fa-star"
+                    title="Tuyệt vời"
+                  ></i>
+                  <input name="score" type="hidden" id="rating" value="5" />
                 </div>
-              </div>
-              <!-- new 2 -->
-              <div class="new-card col-6 col-lg-4">
-                <div class="new-card__inner">
-                  <a href="#">
-                    <div class="new-card__img">
-                      <img
-                        src="assets/image/news/news-1.jpg"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="new-card__title">
-                      <h3>
-                        Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
-                      </h3>
-                    </div>
-                    <div class="new-card__desc">
-                      <p>
-                        Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
-                        của Converse...
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- new 3 -->
-              <div class="new-card col-6 col-lg-4">
-                <div class="new-card__inner">
-                  <a href="#">
-                    <div class="new-card__img">
-                      <img
-                        src="assets/image/news/news-1.jpg"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="new-card__title">
-                      <h3>
-                        Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
-                      </h3>
-                    </div>
-                    <div class="new-card__desc">
-                      <p>
-                        Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
-                        của Converse...
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- new 4 -->
-              <div class="new-card col-6 col-lg-4">
-                <div class="new-card__inner">
-                  <a href="#">
-                    <div class="new-card__img">
-                      <img
-                        src="assets/image/news/news-1.jpg"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="new-card__title">
-                      <h3>
-                        Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
-                      </h3>
-                    </div>
-                    <div class="new-card__desc">
-                      <p>
-                        Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
-                        của Converse...
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- new 5 -->
-              <div class="new-card col-6 col-lg-4">
-                <div class="new-card__inner">
-                  <a href="#">
-                    <div class="new-card__img">
-                      <img
-                        src="assets/image/news/news-1.jpg"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="new-card__title">
-                      <h3>
-                        Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
-                      </h3>
-                    </div>
-                    <div class="new-card__desc">
-                      <p>
-                        Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
-                        của Converse...
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- new 6 -->
-              <div class="new-card col-6 col-lg-4">
-                <div class="new-card__inner">
-                  <a href="#">
-                    <div class="new-card__img">
-                      <img
-                        src="assets/image/news/news-1.jpg"
-                        alt=""
-                        class="img-fluid"
-                      />
-                    </div>
-                    <div class="new-card__title">
-                      <h3>
-                        Converse sẽ mang Golf le Fleur* Chuck 70 về Việt Nam1?
-                      </h3>
-                    </div>
-                    <div class="new-card__desc">
-                      <p>
-                        Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm
-                        của Converse...
-                      </p>
-                    </div>
-                  </a>
-                </div>
+                <span class="review-header-time" itemprop="datePublished"
+                  >24/03/2021</span
+                >
               </div>
             </div>
-            <!-- pagination  các tab -->
+            <div class="review-content">
+              <p class="review-content-body" itemprop="description">
+                Đỉnh của đỉnh luôn Không ngờ lại mua được giá tốt như vậy Cám ơn
+                shop nha !
+              </p>
+            </div>
 
-            <nav aria-label="Page navigation example ">
-              <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                  <a class="page-link"
-                    ><i class="fa-solid fa-angle-left"></i
-                  ></a>
-                </li>
-                <li class="page-item page-item--active">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#"
-                    ><i class="fa-solid fa-angle-right"></i
-                  ></a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="col-12 col-lg-3">
-            <div class="news-hot">
-              <div class="new-hot__title">Bài viết nổi bật</div>
-              <!-- news hot 1 -->
-              <div class="news-hot__item">
-                <a href="">
-                  <div class="news-hot__image">
-                    <img
-                      src="assets/image/news/news-1.jpg"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="news-hot__info">
-                    <p class="news-hot__info-title">
-                      Converse sẽ mang Golf le...
-                    </p>
-                    <p class="news-hot__info-desc">
-                      Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
-                      Converse...
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- news hot 2 -->
-              <div class="news-hot__item">
-                <a href="">
-                  <div class="news-hot__image">
-                    <img
-                      src="assets/image/news/news-1.jpg"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="news-hot__info">
-                    <p class="news-hot__info-title">
-                      Converse sẽ mang Golf le...
-                    </p>
-                    <p class="news-hot__info-desc">
-                      Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
-                      Converse...
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- news hot 3 -->
-              <div class="news-hot__item">
-                <a href="">
-                  <div class="news-hot__image">
-                    <img
-                      src="assets/image/news/news-1.jpg"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="news-hot__info">
-                    <p class="news-hot__info-title">
-                      Converse sẽ mang Golf le...
-                    </p>
-                    <p class="news-hot__info-desc">
-                      Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
-                      Converse...
-                    </p>
-                  </div>
-                </a>
-              </div>
-              <!-- news hot 4 -->
-              <div class="news-hot__item">
-                <a href="">
-                  <div class="news-hot__image">
-                    <img
-                      src="assets/image/news/news-1.jpg"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </div>
-                  <div class="news-hot__info">
-                    <p class="news-hot__info-title">
-                      Converse sẽ mang Golf le...
-                    </p>
-                    <p class="news-hot__info-desc">
-                      Nhờ cú leak vừa rồi từ nơi sản sinh ra các thành phẩm của
-                      Converse...
-                    </p>
-                  </div>
-                </a>
-              </div>
+            <div
+              style="display: none"
+              itemtype="http://schema.org/Rating"
+              itemscope=""
+              itemprop="reviewRating"
+            >
+              <span itemprop="ratingValue">5</span>
             </div>
           </div>
+          <!-- trả lời bình luận -->
+          <div id="respond" class="comment-respond">
+            <h3 id="reply-title" class="comment-reply-title">Trả lời</h3>
+            <form
+              action=""
+              method=""
+              id="comment-form"
+              class="comment-form row"
+              novalidate=""
+            >
+              <div class="comment-form-item comment-form-rating col-12">
+                <label for="rating">Đánh giá:</label>
+                <p class="rating-item">
+                  <i data-alt="1" class="fa-solid fa-star" title="Rất tệ"></i>
+                  <i
+                    data-alt="2"
+                    class="fa-solid fa-star"
+                    title="Không hài lòng"
+                  ></i>
+                  <i
+                    data-alt="3"
+                    class="fa-solid fa-star"
+                    title="Bình thường"
+                  ></i>
+                  <i data-alt="4" class="fa-solid fa-star" title="Hài lòng"></i>
+                  <i
+                    data-alt="5"
+                    class="fa-solid fa-star"
+                    title="Tuyệt vời"
+                  ></i>
+                  <input name="score" type="hidden" id="rating" value="0" />
+                </p>
+              </div>
+              <div class="comment-form-item comment-form-comment col-12">
+                <label for="comment">Bình luận:</label>
+                <textarea
+                  id="comment"
+                  name="comment"
+                  cols="45"
+                  rows="8"
+                  maxlength="65525"
+                  required="required"
+                ></textarea>
+              </div>
+              <div
+                class="comment-form-item comment-form-author col-12 col-lg-3"
+              >
+                <label for="author">Tên <span class="required">*</span></label>
+                <input
+                  id="author"
+                  name="author"
+                  type="text"
+                  value=""
+                  size="30"
+                  maxlength="245"
+                  required="required"
+                />
+              </div>
+              <div class="comment-form-item comment-form-email col-12 col-lg-3">
+                <label for="email">Email <span class="required">*</span></label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value=""
+                  size="30"
+                  maxlength="100"
+                  aria-describedby="email-notes"
+                  required="required"
+                />
+              </div>
+              <div class="form-submit">
+                <input
+                  name="submit"
+                  type="submit"
+                  id="submit"
+                  class="submit btn btn--s"
+                  value="Phản hồi"
+                />
+              </div>
+            </form>
+          </div>
+          <!-- #respond -->
         </div>
       </div>
     </section>

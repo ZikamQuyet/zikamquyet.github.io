@@ -102,10 +102,11 @@ tr td {
 .product-quantity input {
   border: 1px solid black;
   padding: 5px;
+  min-width: 23px;
   background: transparent;
 }
 #number-product {
-  width: 30px;
+  max-width: 30px;
   text-align: center;
 }
 /* Hide Arrows From Input Number */
@@ -135,6 +136,14 @@ input::-webkit-inner-spin-button {
 }
 .total-transport-fee input {
   padding: 5px 10px;
+}
+.total-discount-code input{
+  display: block;
+  padding: 5px 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 0.4rem;
 }
 .all-total-price-amount,
 .all-total-price-amount span {
