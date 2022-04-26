@@ -4,29 +4,35 @@ const filterPrice = document.querySelector('#filter-price');
 const filterColor = document.querySelector('#filter-color');
 const filterSize = document.querySelector('#filter-size');
 
-function hideFilter(filter, classHide) {
-    filter.classList.toggle(classHide);
-    filter.previousElementSibling.querySelector('i').classList.toggle(`fa-minus`);
-    filter.previousElementSibling.querySelector('i').classList.toggle(`fa-plus`);
-}
+
+
 filterCategory.previousElementSibling.addEventListener('click', () => {
-    hideFilter(filterCategory, `filter-box--active`);
+    hideMenu2($("#filter-category"), filterCategory, `fa-minus`, `fa-plus`);
 })
 filterVendor.previousElementSibling.addEventListener('click', () => {
-    hideFilter(filterVendor, `filter-box--active`);
+    hideMenu2($("#filter-vendor"), filterVendor, `fa-minus`, `fa-plus`);
+
 })
 filterPrice.previousElementSibling.addEventListener('click', () => {
-    hideFilter(filterPrice, `filter-box--active`);
+    hideMenu2($("#filter-price"), filterPrice, `fa-minus`, `fa-plus`);
 })
 filterColor.previousElementSibling.addEventListener('click', () => {
-    hideFilter(filterColor, `filter-box--active`);
+    hideMenu2($("#filter-color"), filterColor, `fa-minus`, `fa-plus`);
 })
 filterSize.previousElementSibling.addEventListener('click', () => {
-    hideFilter(filterSize, `filter-box--active`);
+    hideMenu2($("#filter-size"), filterSize, `fa-minus`, `fa-plus`);
 })
 
-// active modal filter mobile
 const filter = document.querySelector('.filter');
-const wrapFilter = document.querySelector('.wrap-filter');
-const btnFilter = document.querySelector('.btn-filter');
-btnFilter.addEventListener('click', () => activeModal(filter, wrapFilter, `filter--active`));
+let x = window.matchMedia("(max-width: 992px)")
+function myFunction(x) {
+    if (x.matches) { // If media query matches
+        filter.classList.add('offcanvas', 'offcanvas-start');
+        filter.style.visibility = 'hidden';
+    } else {
+        filter.classList.remove('offcanvas', 'offcanvas-start');
+        filter.style.visibility = 'visible';
+    }
+}
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes

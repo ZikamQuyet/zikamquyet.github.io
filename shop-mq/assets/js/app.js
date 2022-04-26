@@ -104,11 +104,11 @@ for (let i = 0; i < btnLinkLogin.length; i++) {
     }
 }
 // active modal menu mobile
-const btnNavMobileIcon = document.querySelector('.nav-mobile__icon');
-const navMobileMain = document.querySelector('.nav-mobile-main');
-const navMobileMainWrapper = document.querySelector('.nav-mobile-main__wrapper');
+// const btnNavMobileIcon = document.querySelector('.nav-mobile__icon');
+// const navMobileMain = document.querySelector('.nav-mobile-main');
+// const navMobileMainWrapper = document.querySelector('.nav-mobile-main__wrapper');
 
-btnNavMobileIcon.addEventListener('click', () => activeModal(navMobileMain, navMobileMainWrapper, `nav-mobile-main--active`));
+// btnNavMobileIcon.addEventListener('click', () => activeModal(navMobileMain, navMobileMainWrapper, `nav-mobile-main--active`));
 
 // active modal search mobile
 const btnHeaderSearchMobile = document.querySelector('.header__search i');
@@ -122,4 +122,21 @@ btnHeaderSearchMobile.addEventListener('click', () => {
     activeModal(headerSearchContainer, headerSearchInput, `header__search--active`);
     // console.log('a');
 });
+// show menu cấp 2
+function hideMenu2(menu2, icon, classIcon1, classIcon2) {
+    menu2.slideToggle();
+    icon.previousElementSibling.querySelector('i').classList.toggle(classIcon1);
+    icon.previousElementSibling.querySelector('i').classList.toggle(classIcon2);
+}
 
+const navChildBoy = document.querySelector('.nav-child__boy');
+const navChildGirl = document.querySelector('.nav-child__girl');
+
+navChildBoy.previousElementSibling.addEventListener('click', () => {
+
+    hideMenu2($(".nav-child__boy"), navChildBoy, `fa-angle-down`, `fa-angle-up`);
+})
+navChildGirl.previousElementSibling.addEventListener('click', () => {
+
+    hideMenu2($(".nav-child__girl"), navChildGirl, `fa-angle-down`, `fa-angle-up`);
+})
