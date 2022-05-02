@@ -225,7 +225,7 @@
           <div class="row justify-content-center">
             <div class="col-12 header-bottom__nav">
               <ul class="nav justify-content-center">
-                <li class="nav__item nav__home nav__item--active">
+                <li class="nav__item nav__home">
                   <a href="index.html">Trang chủ</a>
                 </li>
                 <li class="nav__item nav__products--boy">
@@ -260,7 +260,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav__item nav__products">
+                <li class="nav__item nav__products nav__item--active">
                   <a href="san-pham.html">Sản phẩm</a>
                 </li>
                 <li class="nav__item nav__news">
@@ -504,11 +504,11 @@
           <!-- filter -->
           <!-- show" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel" aria-modal="true" role="dialog" style="visibility: visible;" -->
           <div
-            class="col-lg-3 filter "
+            class="col-lg-3 filter"
             data-bs-scroll="true"
             tabindex="-1"
-            id="offcanvasWithBothOptions"
-            aria-labelledby="offcanvasWithBothOptionsLabel"
+            id="offcanvasWithBackdrop"
+            aria-labelledby="offcanvasWithBackdropLabel"
           >
             <div class="wrap-filter">
               <!-- danh mục -->
@@ -854,7 +854,6 @@
             </div>
           </div>
 
-
           <!-- products -->
           <div class="col-12 col-lg-9">
             <div class="group-collection">
@@ -863,8 +862,8 @@
                   class="btn-filter btn btn--s my-2 btn-primary"
                   type="button"
                   data-bs-toggle="offcanvas"
-                  data-bs-target="#offcanvasWithBothOptions"
-                  aria-controls="offcanvasWithBothOptions"
+                  data-bs-target="#offcanvasWithBackdrop"
+                  aria-controls="offcanvasWithBackdrop"
                 >
                   <i class="fa-solid fa-filter"></i>
                 </button>
@@ -932,33 +931,14 @@
                   >
                 </div>
                 <ul class="product__colors">
-                  <li>
-                    <label
-                      for=""
-                      class="product-color__item"
-                      style="background-color: #fff"
-                    >
-                      <input
-                        type="radio"
-                        name="product-color-filter"
-                        data-color="0"
-                      />
-                    </label>
-                  </li>
-                  <li>
-                    <label
-                      for=""
-                      class="product-color__item product-color__item--active"
-                      style="background-color: #000"
-                    >
-                      <input
-                        type="radio"
-                        name="product-color-filter"
-                        data-color="2"
-                        checked
-                      />
-                    </label>
-                  </li>
+                  <li
+                    class="product-color__item"
+                    style="background-color: #fff"
+                  ></li>
+                  <li
+                    class="product-color__item product-color__item--active"
+                    style="background-color: #000"
+                  ></li>
                 </ul>
               </div>
               <!-- product-card-2 -->
@@ -1009,24 +989,11 @@
                   <li
                     class="product-color__item"
                     style="background-color: #fff"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="0"
-                    />
-                  </li>
+                  ></li>
                   <li
                     class="product-color__item product-color__item--active"
                     style="background-color: #000"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="2"
-                      checked
-                    />
-                  </li>
+                  ></li>
                 </ul>
               </div>
               <!-- product-card-3 -->
@@ -1077,24 +1044,11 @@
                   <li
                     class="product-color__item"
                     style="background-color: #fff"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="0"
-                    />
-                  </li>
+                  ></li>
                   <li
                     class="product-color__item product-color__item--active"
                     style="background-color: #000"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="2"
-                      checked
-                    />
-                  </li>
+                  ></li>
                 </ul>
               </div>
               <!-- product-card-4 -->
@@ -1145,24 +1099,11 @@
                   <li
                     class="product-color__item"
                     style="background-color: #fff"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="0"
-                    />
-                  </li>
+                  ></li>
                   <li
                     class="product-color__item product-color__item--active"
                     style="background-color: #000"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="2"
-                      checked
-                    />
-                  </li>
+                  ></li>
                 </ul>
               </div>
               <!-- product-card-5 -->
@@ -1213,24 +1154,11 @@
                   <li
                     class="product-color__item"
                     style="background-color: #fff"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="0"
-                    />
-                  </li>
+                  ></li>
                   <li
                     class="product-color__item product-color__item--active"
                     style="background-color: #000"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="2"
-                      checked
-                    />
-                  </li>
+                  ></li>
                 </ul>
               </div>
               <!-- product-card-6 -->
@@ -1281,24 +1209,11 @@
                   <li
                     class="product-color__item"
                     style="background-color: #fff"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="0"
-                    />
-                  </li>
+                  ></li>
                   <li
                     class="product-color__item product-color__item--active"
                     style="background-color: #000"
-                  >
-                    <input
-                      type="radio"
-                      name="product-color-filter"
-                      data-color="2"
-                      checked
-                    />
-                  </li>
+                  ></li>
                 </ul>
               </div>
 

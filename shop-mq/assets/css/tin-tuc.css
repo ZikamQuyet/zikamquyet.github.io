@@ -115,6 +115,10 @@ ul.breadcrumb li a:hover {
   color: var(--secondary-color-1);
   border: 1px solid var(--secondary-color-1);
 }
+.page-item:hover .page-link{
+  text-decoration: none;
+  color: var(--primary--color-2);
+}
 /* ------------------------------------------------------- */
 /*news hot*/
 .news-hot {
@@ -171,5 +175,8 @@ ul.breadcrumb li a:hover {
   }
   .breadcrumb {
     justify-content: center;
+  }
+  .news-hot{
+    margin-top: 1.875rem;
   }
 }

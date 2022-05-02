@@ -113,6 +113,12 @@ i {
   background-color: var(--primary--color-4);
   outline: 1px solid var(--secondary-color-1);
 }
+button:focus:not(:focus-visible) {
+  outline: 1px solid var(--secondary-color-1);
+}
+.btn:focus {
+  box-shadow: none;
+}
 .btn--lg {
   padding: 1.25rem 2.5rem;
   /* min-width: 9rem; */

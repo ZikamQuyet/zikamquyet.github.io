@@ -102,6 +102,7 @@ header {
 }
 .cart__product-desc {
   margin: 0 5px;
+  text-align: left;
 }
 .cart__product-name {
   cursor: pointer;
@@ -112,7 +113,7 @@ header {
   font-style: normal;
   color: var(--primary--color-1);
 }
-.cart__product-price {
+.cart__product-price span {
   font-style: italic;
 }
 .cart__product-delete i {
@@ -287,11 +288,22 @@ header {
   line-height: 22px;
   margin-bottom: 0.4rem;
 }
+.password-wrapper {
+  position: relative;
+}
+.password-wrapper i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  cursor: pointer;
+}
 .input__check p {
   opacity: 0;
 }
 .input__check--error p {
-  /* opacity: 1; */
+  opacity: 1;
   color: var(--secondary-color-1);
 }
 .forgot-password {
@@ -300,6 +312,7 @@ header {
 }
 .forgot-password p {
   cursor: pointer;
+  display: inline-block;
   font-style: italic;
   color: var(--primary--color-2);
 }
