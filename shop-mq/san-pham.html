@@ -769,9 +769,17 @@
                 <div class="filter-box filter-box--active" id="filter-size">
                   <ul>
                     <li class="filter-size filter-size--active">
+                      All
+                      <input
+                        type="checkbox"
+                        name="product-content-size"
+                        value="all"
+                      />
+                    </li>
+                    <li class="filter-size">
                       36
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="36"
                       />
@@ -780,7 +788,7 @@
                     <li class="filter-size">
                       37
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="37"
                       />
@@ -789,7 +797,7 @@
                     <li class="filter-size">
                       38
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="38"
                       />
@@ -798,7 +806,7 @@
                     <li class="filter-size">
                       39
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="39"
                       />
@@ -807,7 +815,7 @@
                     <li class="filter-size">
                       40
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="40"
                       />
@@ -816,7 +824,7 @@
                     <li class="filter-size">
                       41
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="41"
                       />
@@ -825,7 +833,7 @@
                     <li class="filter-size">
                       42
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="42"
                       />
@@ -834,7 +842,7 @@
                     <li class="filter-size">
                       43
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="43"
                       />
@@ -843,7 +851,7 @@
                     <li class="filter-size">
                       44
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="product-content-size"
                         value="44"
                       />
@@ -1216,31 +1224,30 @@
                   ></li>
                 </ul>
               </div>
-
-              <!-- pagination  các tab -->
-              <nav
-                aria-label="Page navigation example"
-                class="pagination-wrapper"
-              >
-                <ul class="pagination justify-content-center">
-                  <li class="page-item disabled">
-                    <a class="page-link"
-                      ><i class="fa-solid fa-angle-left"></i
-                    ></a>
-                  </li>
-                  <li class="page-item page-item--active">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item">
-                    <a class="page-link" href="#"
-                      ><i class="fa-solid fa-angle-right"></i
-                    ></a>
-                  </li>
-                </ul>
-              </nav>
             </div>
+            <!-- pagination  các tab -->
+            <nav
+            aria-label="Page navigation example"
+            class="pagination-wrapper"
+          >
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link"
+                  ><i class="fa-solid fa-angle-left"></i
+                ></a>
+              </li>
+              <li class="page-item page-item--active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
           </div>
         </div>
       </div>
@@ -1354,7 +1361,10 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/login.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/san-pham.js"></script>
+    <script src="assets/js/render-products.js"></script>
+    <script src="assets/js/render-products-SP.js"></script>
   </body>
 </html>

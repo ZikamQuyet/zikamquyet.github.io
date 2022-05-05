@@ -61,9 +61,16 @@ function activeModal(modal, modalWrapper, classActive) {
 }
 // running active modal login
 btnHeaderAccounts.forEach(element => {
-    // activeModal(element, modalLogin, modalWrapperLogin, `modal--active`);
     element.addEventListener('click', () => {
         activeModal(modalLogin, modalWrapperLogin, `modal--active`);
+        // clear text input
+        allInputLogin.forEach(e=>{
+            e.value="";
+        })
+        // clear error
+        allErrLogin.forEach(e=>{
+            e.classList.remove(`input__check--error`);
+        })
     }
     )
 });

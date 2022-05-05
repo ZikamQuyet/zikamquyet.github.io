@@ -4,8 +4,6 @@ const btnShowHidePassword = document.querySelectorAll('.password-wrapper i');
 btnShowHidePassword.forEach(e => {
     e.addEventListener('click', () => {
         showOrHidePassword(e);
-
-
     })
 })
 
@@ -26,7 +24,16 @@ function showOrHidePassword(ele) {
 
 
 
+// thông báo đăng nhập
+const notifyLogin = document.querySelector('.notify-login');
 
+function notifySuccess(text) {
+    notifyLogin.classList.add("notify-login--active");
+    notifyLogin.querySelector("span").innerText = text;
+    setTimeout(() => {
+        notifyLogin.classList.remove("notify-login--active");
+    }, 3000)
+}
 // check login
 let users = [];
 
@@ -38,8 +45,8 @@ const txtLoginPassword = document.querySelector('#login-password');
 const errLoginEmail = document.querySelector('#input__check-login-email');
 const errLoginPassword = document.querySelector('#input__check-login-password');
 // lấy dữ liệu từ local gắn vào biến users
-users=getDataFromLocalStorage("users");
-
+users = 
+getDataFromLocalStorage("users");
 btnLogin.addEventListener('click', (e) => {
     e.preventDefault();
     let check = 0;
@@ -80,8 +87,10 @@ btnLogin.addEventListener('click', (e) => {
             }
         })
     }
-    if(check===2){
-        console.log(`Dang nhap thanh cong`)
+    if (check === 2) {
+        notifySuccess("Đăng nhập thành công");
+        console.log(`Dang nhap thanh cong`);
+        modalLogin.classList.remove(`modal--active`);
     }
 })
 const btnRegister = document.querySelector('#btn-register');
@@ -171,12 +180,24 @@ btnRegister.addEventListener("click", (e) => {
         }
         users.push(newUser);
         setDataFromLocalStorage(users, "users");
-        console.log(`ddawng ky thanh cong`);
+        notifySuccess("Đăng ký thành công");
+        console.log(`Dang nhap thanh cong`);
+        modalSignIn.classList.remove(`modal--active`);
+        activeModal(modalLogin, modalWrapperLogin, `modal--active`);
+        // clear text input
+        allInputLogin.forEach(e => {
+            e.value = "";
+        })
+        // clear error
+        allErrLogin.forEach(e => {
+            e.classList.remove(`input__check--error`);
+        })
     }
 })
 
 
-const btnSend = document.querySelector('#btn-login');
+const btnSend = document.querySelector('#btn-send');
+
 function setError(showErr, err) {
     showErr.classList.add(`input__check--error`);
     showErr.innerHTML = `<p>${err}</p>`;
@@ -203,6 +224,7 @@ function isPhoneVN(phone) {
             /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/
         );
 }
+// random id
 function randomId() {
     return Math.floor(Math.random() * 10000);
 }

@@ -352,7 +352,27 @@ header {
 .modal--active {
   display: flex;
 }
-
+/* thông báo đăng nhập */
+.notify-login {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  padding: 1rem 1.5rem;
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  background: var(--primary--color-4);
+  outline: 3px solid rgb(0, 192, 0);
+  z-index: 1200;
+  transition: 0.25s ease-out;
+}
+.notify-login--active {
+  display: inline-flex;
+}
+.notify-login i {
+  color: rgb(0, 192, 0);
+}
 @media (max-width: 992px) {
   /* -------------------------------- */
   /* header */

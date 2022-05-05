@@ -24,6 +24,7 @@ li {
   --primary--color-5: #cacaca;
   --secondary-color-1: #b71811;
   --secondary-color-2: #dc2f18;
+  --border-color:#000
 }
 *:before,
 *:after {
@@ -87,8 +88,8 @@ a:hover {
 span {
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 14px;
+  line-height: 22px;
 }
 section {
   margin: 6.25rem 0rem;
