@@ -2,21 +2,23 @@
 let cart = [];
 cart = getDataFromLocalStorage("cart");
 const headerCart = document.querySelector(".header__cart");
-console.log(cart);
-function addCart(e, data) {
+// console.log(cart);
+function addCart1(e, data) {
     const parentNodeBtn = e.target.parentNode;
     const productBtn = parentNodeBtn.parentNode;
     const productCardImg = productBtn.parentNode;
     const productCard = productCardImg.parentNode;
     const allColors = productCard.querySelectorAll(".product-color__item");
+    setDataCart(allColors, data, "product-color__item--active")
+}
+function setDataCart(ele, data, className) {
     let indexColor;
     let newObj;
-    for (let i = 0; i < allColors.length; i++) {
-        if (allColors[i].classList.contains("product-color__item--active")) {
+    for (let i = 0; i < ele.length; i++) {
+        if (ele[i].classList.contains(className)) {
             indexColor = i;
         }
     }
-
     products.forEach(element => {
         if (element.id === data) {
             newObj = {
@@ -33,7 +35,7 @@ function addCart(e, data) {
             }
             else {
                 for (i = 0; i < cart.length; i++) {
-                    if (newObj.id === cart[i].id && newObj.color === cart[i].color) {
+                    if ((newObj.id === cart[i].id && newObj.color === cart[i].color) && newObj.size == cart[i].size) {
                         cart[i].quantity += 1;
                         return;
                     }
@@ -41,6 +43,59 @@ function addCart(e, data) {
                 cart.push(newObj);
             }
 
+        }
+    });
+    setDataFromLocalStorage(cart, "cart");
+    // render khi click them san pham
+    headerCart.innerHTML = renderUICartMini(cart);
+}
+function addCart2(e, id) {
+    e.preventDefault();
+    const productContentBtn = e.target.parentNode;
+    const formProductContent = productContentBtn.parentNode;
+    const productContentColors = formProductContent.querySelectorAll("#filter-color li");
+    const productContentSizes = formProductContent.querySelectorAll("#filter-size li");
+    const productContentQuantity = formProductContent.querySelector(".product-quantity #number-product");
+    let newObj;
+    let color;
+    let indexColor;
+    let size;
+    let quantity;
+    for (let i = 0; i < productContentColors.length; i++) {
+        if (productContentColors[i].classList.contains("filter-color--active")) {
+            color = productContentColors[i].querySelector("input").value;
+            indexColor = i;
+        }
+    }
+    productContentSizes.forEach(e => {
+        if (e.classList.contains("filter-size--active")) {
+            size = e.querySelector("input").value
+        }
+    })
+    quantity = parseInt(productContentQuantity.value);
+    products.forEach(element => {
+        if (element.id === id) {
+            newObj = {
+                id: element.id,
+                title: element.title,
+                price: element.discountPrice,
+                quantity: quantity,
+                color: color,
+                images: element.images[indexColor],
+                size: size
+            }
+            if (cart.length === 0) {
+                cart.push(newObj);
+            }
+            else {
+                for (i = 0; i < cart.length; i++) {
+                    if ((newObj.id === cart[i].id && newObj.color === cart[i].color) && newObj.size == cart[i].size) {
+                        cart[i].quantity += 1;
+                        return;
+                    }
+                }
+                cart.push(newObj);
+            }
         }
     });
     setDataFromLocalStorage(cart, "cart");
@@ -63,7 +118,7 @@ function renderUICartMini(data) {
                 <p>
                     Tổng:
                     <span class="price-amount">
-                        ${renderTotalPriceCartMini(data)}
+                        ${renderTotalPriceCart(data)}
                     </span>
                 </p>
                 </div>
@@ -94,7 +149,7 @@ function renderProductCartMini(data) {
         let html = `
                 <div class="cart-info__item">
                 <div class="cart__product-img">
-                    <a href="chi-tiet-san-pham.html">
+                    <a href="chi-tiet-san-pham.html" onclick="getIdProduct(${data[i].id})">
                         <img
                             src="${data[i].images[0]}"
                             alt="sp1"
@@ -105,6 +160,7 @@ function renderProductCartMini(data) {
                     <a
                         href="chi-tiet-san-pham.html"
                         class="cart__product-name"
+                        onclick="getIdProduct(${data[i].id})"
                     >
                         ${data[i].title}
                     </a>
@@ -125,7 +181,7 @@ function renderProductCartMini(data) {
     return htmls.join("")
 }
 
-function renderTotalPriceCartMini(data) {
+function renderTotalPriceCart(data) {
     let total = 0;
     data.forEach(element => {
         total += element.price * element.quantity;
@@ -135,7 +191,7 @@ function renderTotalPriceCartMini(data) {
 
 function deleteProductCartMini(index) {
     for (let i = 0; i < cart.length; i++) {
-        if (i===index) {
+        if (i === index) {
             cart.splice(i, 1);
         }
     }

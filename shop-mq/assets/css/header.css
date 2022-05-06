@@ -54,13 +54,13 @@ header {
 }
 .cart-info {
   position: absolute;
-  top: 40px;
+  top: 2.5rem;
   /* transform: translateY(16%); */
   right: -5px;
   z-index: 2000;
   background-color: var(--primary--color-4);
-  padding: 10px;
-  min-width: 250px;
+  padding: 0.625rem;
+  min-width: 15.625rem;
   height: auto;
   opacity: 0;
   visibility: hidden;
@@ -94,8 +94,8 @@ header {
 }
 
 .cart__product-img {
-  max-width: 65px;
-  max-height: 70px;
+  max-width: 4.0625rem;
+  max-height: 4.375rem;
   overflow: hidden;
 }
 .cart__product-img img {
@@ -109,8 +109,8 @@ header {
   cursor: pointer;
   margin-bottom: 5px;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-style: normal;
   color: var(--primary--color-1);
 }
@@ -119,11 +119,11 @@ header {
 }
 .cart__product-delete i {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--primary--color-1);
 }
 .cart-total-price p {
-  margin: 20px 0;
+  margin: 1.25rem 0;
   text-align: center;
   font-weight: 600;
   position: relative;
@@ -150,8 +150,8 @@ header {
   text-align: center;
 }
 .cart-btn a {
-  margin-top: 10px;
-  min-width: 150px;
+  margin-top: 0.625rem;
+  min-width: 9.375rem;
 }
 .header__account :hover {
   color: var(--secondary-color-1);
@@ -283,10 +283,10 @@ header {
 .modal__input input {
   display: block;
   min-width: 31.25rem;
-  padding: 5px 10px;
+  padding: 5px 0.625rem;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   margin-bottom: 0.4rem;
 }
 .password-wrapper {
@@ -341,8 +341,8 @@ header {
   cursor: pointer;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   color: var(--primary--color-2);
 }
 .register-login span:hover {
@@ -405,11 +405,11 @@ header {
   .header__search .header__search-input {
     display: block;
     position: absolute;
-    top: 60px;
+    top: 3.75rem;
     left: 0;
     background-color: var(--primary--color-1);
     width: 100vw;
-    padding: 12px 12px;
+    padding: 0.75rem 0.75rem;
     color: var(--primary--color-4);
     z-index: 2000;
     transition: 0.25s ease-out;
@@ -429,42 +429,6 @@ header {
   .offcanvas {
     width: 50%;
   }
-  /* .nav-mobile-main {
-    position: relative;
-    display: none;
-  } */
-
-  /* .nav-mobile-main::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
-  } */
-  /* .nav-mobile-main__wrapper {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 40%;
-    height: 100%;
-    z-index: 1200;
-    background-color: var(--primary--color-5);
-    animation: modalNavMobileFadeIn ease 0.5s;
-  }
-  @keyframes modalNavMobileFadeIn {
-    from {
-      opacity: 0;
-      transform: translateX(-50%);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  .nav-mobile-main--active {
-    display: initial;
-  } */
   .nav-mobile-main .header__account {
     text-align: center;
     padding: 1.5rem;
@@ -474,7 +438,7 @@ header {
   }
   .nav__item {
     cursor: pointer;
-    padding: 1.5rem 30px;
+    padding: 1.5rem 1.875rem;
   }
   .nav__item a {
     /* display: block; */

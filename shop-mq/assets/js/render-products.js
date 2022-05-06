@@ -185,10 +185,10 @@ function renderUI(data, quantity, col, colLg, dataName) {
                 ${renderImage(data[i].images, 0)}
               </a>
               <div class="product__btn" >
-                <a href="gio-hang.html" class="btn product__btn__buy" onclick="getIdProduct(${data[i].id})">
+                <a href="gio-hang.html" class="btn product__btn__buy" onclick="getIdProduct(${data[i].id});addCart1(event,${data[i].id})">
                   <p>MUA NGAY</p>
                 </a>
-                <button class="btn product__btn__add-cart" onclick="getIdProduct(${data[i].id});addCart(event,${data[i].id})">
+                <button class="btn product__btn__add-cart" onclick="getIdProduct(${data[i].id});addCart1(event,${data[i].id})">
                   <img
                     src="assets/icon/cart-plus-white.svg"
                     alt=""

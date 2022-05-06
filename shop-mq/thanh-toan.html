@@ -522,7 +522,7 @@
                     id="payment-name"
                     placeholder="Nhập họ tên"
                   />
-                  <small class="input__check input__check--error">
+                  <small class="input__check" id="input__check-payment-name">
                     <p>Không bỏ trống...</p></small
                   >
                 </div>
@@ -534,7 +534,7 @@
                     id="payment-address"
                     placeholder="Nhập địa chỉ"
                   />
-                  <small class="input__check input__check--error">
+                  <small class="input__check" id="input__check-payment-address">
                     <p>Không bỏ trống...</p></small
                   >
                 </div>
@@ -546,7 +546,7 @@
                     id="payment-phone"
                     placeholder="Nhập SĐT"
                   />
-                  <small class="input__check input__check--error">
+                  <small class="input__check" id="input__check-payment-phone">
                     <p>Không bỏ trống...</p></small
                   >
                 </div>
@@ -558,7 +558,7 @@
                     id="payment-email"
                     placeholder="Nhập Email"
                   />
-                  <small class="input__check input__check--error">
+                  <small class="input__check" id="input__check-payment-email">
                     <p>Không bỏ trống...</p></small
                   >
                 </div>
@@ -570,6 +570,7 @@
 
                 <div class="payment-info__item payment-info__method-payment">
                   <p>Hình thức thanh toán:</p>
+
                   <input type="radio" id="money" name="age" value="0" />
                   <label for="money"><p>Thanh toán tiền mặt</p></label><br />
                   <input type="radio" id="banking" name="age" value="1" />
@@ -581,14 +582,19 @@
                     <p>Ngân hàng: abcxyz</p>
                     <p>Chủ tài khoản: Nguyễn Văn A</p>
                   </small>
+                  <small class="input__check" id="input__check-method-payment">
+                    <p>Hãy chọn phương thức</p></small
+                  >
                 </div>
 
                 <div class="payment-info__item payment-info__login-register">
                   <p>
-                    Bạn đã có tài khoản? <span href="#">Đăng nhập ngay</span>
+                    Bạn đã có tài khoản?
+                    <span class="login">Đăng nhập ngay</span>
                   </p>
                   <p>
-                    Bạn đã chưa có tài khoản? <span href="#">Đăng ký ngay</span>
+                    Bạn đã chưa có tài khoản?
+                    <span class="register">Đăng ký ngay</span>
                   </p>
                 </div>
 
@@ -807,5 +813,6 @@
     <script src="assets/js/app.js"></script>
     <script src="assets/js/render-products.js"></script>
     <script src="assets/js/render-cart-mini.js"></script>
+    <script src="assets/js/thanh-toan.js"></script>
   </body>
 </html>

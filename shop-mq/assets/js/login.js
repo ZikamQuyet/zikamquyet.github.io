@@ -45,8 +45,8 @@ const txtLoginPassword = document.querySelector('#login-password');
 const errLoginEmail = document.querySelector('#input__check-login-email');
 const errLoginPassword = document.querySelector('#input__check-login-password');
 // lấy dữ liệu từ local gắn vào biến users
-users = 
-getDataFromLocalStorage("users");
+users =
+    getDataFromLocalStorage("users");
 btnLogin.addEventListener('click', (e) => {
     e.preventDefault();
     let check = 0;
@@ -59,15 +59,18 @@ btnLogin.addEventListener('click', (e) => {
         setError(errLoginEmail, "Sai định dạng email");
     }
     else {
+        let checkEmail = 0;
         users.forEach(e => {
-            if (e.email === txtLoginEmailValue) {
+            if (e.email == txtLoginEmailValue) {
                 setSuccess(errLoginEmail);
-                check++;
-            }
-            else {
-                setError(errLoginEmail, "Email không đúng");
+                check += 1;
+                checkEmail++;
             }
         })
+        if (checkEmail == 0) {
+            setError(errLoginEmail, "Email không đúng");
+        }
+        // console.log(e.email);
     }
 
     if (txtLoginPasswordValue === "") {
@@ -77,21 +80,25 @@ btnLogin.addEventListener('click', (e) => {
         setError(errLoginPassword, "Có ít nhất 8 ký tự, có ký tự hoa, số");
     }
     else {
+        let checkPassword = 0;
         users.forEach(e => {
-            if (e.password === txtLoginPasswordValue) {
+            if (e.password == txtLoginPasswordValue) {
                 setSuccess(errLoginPassword);
-                check++;
-            }
-            else {
-                setError(errLoginPassword, "Mật khẩu không đúng");
+                check += 1;
+                checkPassword++;
             }
         })
+        if (checkPassword == 0) {
+            setError(errLoginPassword, "Mật khẩu không đúng");
+        }
     }
     if (check === 2) {
         notifySuccess("Đăng nhập thành công");
         console.log(`Dang nhap thanh cong`);
         modalLogin.classList.remove(`modal--active`);
+        console.log("qqqq");
     }
+    console.log(check)
 })
 const btnRegister = document.querySelector('#btn-register');
 

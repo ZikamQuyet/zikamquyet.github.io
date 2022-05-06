@@ -8,15 +8,15 @@
 /* ------------------------------------------------------- */
 /* nav-breadcrumb */
 .nav-breadcrumb {
-  margin-top: 130px;
-  margin-bottom: 20px;
+  margin-top: 8.125rem;
+  margin-bottom: 1.25rem;
 }
 .breadcrumb__item--active {
   display: inline;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   color: var(--primary--color-1);
 }
 ul.breadcrumb li + li:before {
@@ -28,8 +28,8 @@ ul.breadcrumb li a {
   color: var(--primary--color-2);
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 ul.breadcrumb li a:hover {
   text-decoration: underline;
@@ -37,17 +37,17 @@ ul.breadcrumb li a:hover {
 /* ------------------------------------------------------- */
 /* payment-info */
 #payment {
-  margin: 20px 0 100px;
+  margin: 1.25rem 0 6.25rem;
 }
 .payment-info__title,
 .order-info__title {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 26px;
-  padding-bottom: 10px;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  padding-bottom: 0.625rem;
 }
 .payment-info__title::after,
 .order-info__title::after {
@@ -63,21 +63,21 @@ ul.breadcrumb li a:hover {
 .payment-info__item textarea {
   display: block;
   width: 100%;
-  padding: 5px 10px;
+  padding: 5px 0.625rem;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   margin-top: 0.4rem;
 }
 .payment-info__item .input__check p {
   opacity: 0;
 }
 .payment-info__item .input__check--error p {
-  /* opacity: 1; */
+  opacity: 1;
   color: var(--secondary-color-1);
 }
 .payment-info__method-payment {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 .payment-info__method-payment input {
   display: inline-block;
@@ -101,8 +101,8 @@ ul.breadcrumb li a:hover {
   cursor: pointer;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   color: var(--primary--color-2);
 }
 .payment-info__login-register span:hover {
@@ -115,7 +115,7 @@ ul.breadcrumb li a:hover {
 .order-info__item {
   display: flex;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 0.625rem 0;
   position: relative;
 }
 .order-info__item::after {
@@ -131,15 +131,15 @@ ul.breadcrumb li a:hover {
   display: block;
 }
 .order-info__products p {
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .btn-cart-back {
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 .order-product {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .order-product__desc {
   width: 70%;
@@ -148,7 +148,7 @@ ul.breadcrumb li a:hover {
 }
 
 .order-product__image img {
-  width: 70px;
+  width: 4.375rem;
   height: auto;
   object-fit: cover;
 }
@@ -160,14 +160,14 @@ ul.breadcrumb li a:hover {
   font-weight: 600;
 }
 .btn-order {
-  margin-top: 10px;
+  margin-top: 0.625rem;
   text-align: center;
 }
 
 @media (max-width: 992px) {
   .nav-breadcrumb {
-    margin-top: 80px;
-    margin-bottom: 20px;
+    margin-top: 5rem;
+    margin-bottom: 1.25rem;
   }
   .breadcrumb {
     justify-content: center;

@@ -88,8 +88,8 @@ a:hover {
 span {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 section {
   margin: 6.25rem 0rem;

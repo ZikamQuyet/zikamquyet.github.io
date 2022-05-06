@@ -8,15 +8,15 @@
 /* ------------------------------------------------------- */
 /* nav-breadcrumb */
 .nav-breadcrumb {
-  margin-top: 130px;
-  margin-bottom: 20px;
+  margin-top: 8.125rem;
+  margin-bottom: 1.25rem;
 }
 .breadcrumb__item--active {
   display: inline;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   color: var(--primary--color-1);
 }
 ul.breadcrumb li + li:before {
@@ -28,8 +28,8 @@ ul.breadcrumb li a {
   color: var(--primary--color-2);
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 ul.breadcrumb li a:hover {
   text-decoration: underline;
@@ -37,7 +37,7 @@ ul.breadcrumb li a:hover {
 /* ------------------------------------------------------- */
 /*product-image*/
 #product {
-  margin: 20px 0 100px;
+  margin: 1.25rem 0 100px;
 }
 .product-images {
   margin-bottom: 1.875rem;
@@ -74,8 +74,8 @@ ul.breadcrumb li a:hover {
 .product-content-item__title {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   width: 20%;
 }
 .filter-box {
@@ -84,7 +84,7 @@ ul.breadcrumb li a:hover {
 .filter-box ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .filter-box ul li,
@@ -95,8 +95,8 @@ ul.breadcrumb li a:hover {
 .product-content__price .price-amount,
 .product-content__price .discount-price-amount {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
   color: var(--secondary-color-1);
 }
 .discount-price-amount {
@@ -107,7 +107,7 @@ ul.breadcrumb li a:hover {
 }
 .price-amount--discount {
   text-decoration: line-through;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--primary--color-2) !important;
   opacity: 0.8;
 }
@@ -141,7 +141,7 @@ ul.breadcrumb li a:hover {
 .filter-size {
   position: relative;
   padding: 5px;
-  min-width: 30px;
+  min-width: 1.875rem;
   border: 1px solid var(--primary--color-1);
 }
 .filter-size--active {
@@ -165,7 +165,7 @@ ul.breadcrumb li a:hover {
   background: transparent;
 }
 #number-product {
-  max-width: 30px;
+  max-width: 1.875rem;
   text-align: center;
 }
 /* Hide Arrows From Input Number */
@@ -176,7 +176,7 @@ input::-webkit-inner-spin-button {
 }
 /* product-btn */
 .product-content__btn {
-  gap: 10px;
+  gap: 0.625rem;
 }
 .product-content__btn button,.product-content__btn a {
   width: 50%;
@@ -238,8 +238,8 @@ input::-webkit-inner-spin-button {
 .review-header-time {
   color: var(--primary--color-3);
   font-style: italic;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 400;
 }
 /* ------------------------------------------------------- */
@@ -266,18 +266,18 @@ input::-webkit-inner-spin-button {
 .comment-form-item textarea {
   display: block;
   /* min-width: 31.25rem; */
-  padding: 5px 10px;
+  padding: 5px 0.625rem;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   margin-bottom: 0.4rem;
 }
 /* ------------------------------------------------------- */
 /* respon */
 @media (max-width: 992px) {
   .nav-breadcrumb {
-    margin-top: 80px;
-    margin-bottom: 20px;
+    margin-top: 5rem;
+    margin-bottom: 1.25rem;
   }
   .breadcrumb {
     justify-content: center;

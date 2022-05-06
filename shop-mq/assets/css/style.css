@@ -176,8 +176,8 @@
 
 .product-color__item {
   position: relative;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: 0.625rem;
+  margin-bottom: 0.625rem;
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
@@ -502,7 +502,7 @@
   /* -------------------------------- */
   /*  đăng ký thông tin */
   .subscribe-banner__img img {
-    min-height: 200px;
+    min-height: 12.5rem;
   }
   .subscribe-banner__desc h1 {
     font-weight: 600;

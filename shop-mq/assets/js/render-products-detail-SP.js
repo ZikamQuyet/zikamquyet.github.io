@@ -1,14 +1,14 @@
 
-let idDetailProduct=getDataFromLocalStorage("idProduct");
+let idDetailProduct = getDataFromLocalStorage("idProduct");
 const productWrapper = document.querySelector("#product .product-wrapper");
 productWrapper.innerHTML = "";
 productWrapper.innerHTML = renderUIDetailProduct(products, idDetailProduct);
 
 function renderUIDetailProduct(data, id) {
-    let html;
-    for (let i = 0; i < data.length; i++) {
-        if (data[i].id === id) {
-            html = `
+  let html;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].id === id) {
+      html = `
           <div
           class="col-12 col-lg-6 row justify-content-center product-images"
           >
@@ -98,8 +98,8 @@ function renderUIDetailProduct(data, id) {
                   </div>
                 </div>
                 <div class="product-content__main-item product-content__btn">
-                  <a href="#" class="btn btn--lg btn-buy">Mua ngay</a>
-                  <button type="submit" class="btn btn--lg btn-add-cart">
+                  <a href="#" class="btn btn--lg btn-buy" onclick="addCart2(event,${idDetailProduct})">Mua ngay</a>
+                  <button class="btn btn--lg btn-add-cart" onclick="addCart2(event,${idDetailProduct})">
                     Thêm giỏ hàng
                   </button>
                 </div>
@@ -109,13 +109,13 @@ function renderUIDetailProduct(data, id) {
         </div>
 
       `
-            // console.log(element);
-        }
-    };
-    return html;
+      // console.log(element);
+    }
+  };
+  return html;
 }
 function renderImageDetailProduct(data, index) {
-    html = `
+  html = `
       <div class="col-3 text-center product-images__slider">
       <div class="product-images__slider-img">
         <img
@@ -147,44 +147,44 @@ function renderImageDetailProduct(data, index) {
       />
     </div>
   `;
-    return html;
+  return html;
 }
 function renderColorDetailProduct(data, index) {
-    let htmls = [];
-    for (let i = 0; i < data.colors.length; i++) {
-        let html;
-        if (i === 0) {
-            html = `
-        <li style="background: ${data.colors[i]}" class="filter-color  filter-color--active" onclick="changeColorDetailProduct(event);changeImageDetailProduct(${i},${index})">
+  let htmls = [];
+  for (let i = 0; i < data.colors.length; i++) {
+    let html;
+    if (i === 0) {
+      html = `
+        <li style="background: ${data.colors[i]}" class="filter-color  filter-color--active"  onclick="changeColorDetailProduct(event);changeImageDetailProduct(${i},${index})">
           <input
             type="radio"
             name="product-content-color"
-            value=""
+            value="${data.colors[i]}"
           />
         </li>
       `;
-        }
-        else {
-            html = `
+    }
+    else {
+      html = `
         <li style="background: ${data.colors[i]}" class="filter-color" onclick="changeColorDetailProduct(event);changeImageDetailProduct(${i},${index})">
           <input
             type="radio"
             name="product-content-color"
-            value=""
+            value="${data.colors[i]}"
           />
         </li>
       `;
-        }
-        htmls.push(html);
     }
-    return htmls.join("");
+    htmls.push(html);
+  }
+  return htmls.join("");
 }
 function renderSizeDetailProduct(data) {
-    let htmls = [];
-    for (let i = 0; i < data.size.length; i++) {
-        let html;
-        if (i === 0) {
-            html = `
+  let htmls = [];
+  for (let i = 0; i < data.size.length; i++) {
+    let html;
+    if (i === 0) {
+      html = `
                 <li class="filter-size filter-size--active" onclick="changeSizeDetailProduct(event)">
                 ${data.size[i]}
                 <input
@@ -194,9 +194,9 @@ function renderSizeDetailProduct(data) {
                 />
                 </li>
             `;
-        }
-        else {
-            html = `
+    }
+    else {
+      html = `
                 <li class="filter-size" onclick="changeSizeDetailProduct(event)">
                     ${data.size[i]}
                     <input
@@ -206,32 +206,32 @@ function renderSizeDetailProduct(data) {
                     />
                 </li>
             `;
-        }
-        htmls.push(html);
     }
-    return htmls.join("");
+    htmls.push(html);
+  }
+  return htmls.join("");
 }
 colorDetailActive();
 function colorDetailActive() {
-    const activeColorDetail = document.querySelector('#filter-color .filter-color--active');
-    let style = getComputedStyle(activeColorDetail);
-    let colorBg = style.backgroundColor;
-    activeColorDetail.style.setProperty("--border-color", colorBg);
+  const activeColorDetail = document.querySelector('#filter-color .filter-color--active');
+  let style = getComputedStyle(activeColorDetail);
+  let colorBg = style.backgroundColor;
+  activeColorDetail.style.setProperty("--border-color", colorBg);
 }
 // thay đổi khi click đổi màu sản phẩm
 function changeColorDetailProduct(e) {
-    const parentNodeColor = e.target.parentNode;
-    const eleColors = parentNodeColor.querySelectorAll(".filter-color");
-    eleColors.forEach(element => {
-        element.classList.remove("filter-color--active");
-    });
-    e.target.classList.add("filter-color--active");
-    colorDetailActive();
+  const parentNodeColor = e.target.parentNode;
+  const eleColors = parentNodeColor.querySelectorAll(".filter-color");
+  eleColors.forEach(element => {
+    element.classList.remove("filter-color--active");
+  });
+  e.target.classList.add("filter-color--active");
+  colorDetailActive();
 }
 function changeImageDetailProduct(i, index) {
-    const imageWrapper = document.querySelector(".product-images");
-    imageWrapper.innerHTML = "";
-    imageWrapper.innerHTML = `
+  const imageWrapper = document.querySelector(".product-images");
+  imageWrapper.innerHTML = "";
+  imageWrapper.innerHTML = `
             <div class="col-3 text-center product-images__slider">
             <div class="product-images__slider-img">
             <img
@@ -266,27 +266,27 @@ function changeImageDetailProduct(i, index) {
 }
 // thay ddooir size
 function changeSizeDetailProduct(e) {
-    const parentNodeSize = e.target.parentNode;
-    const eleSizes = parentNodeSize.querySelectorAll(".filter-size");
-    eleSizes.forEach(element => {
-        element.classList.remove("filter-size--active");
-    });
-    e.target.classList.add("filter-size--active");
+  const parentNodeSize = e.target.parentNode;
+  const eleSizes = parentNodeSize.querySelectorAll(".filter-size");
+  eleSizes.forEach(element => {
+    element.classList.remove("filter-size--active");
+  });
+  e.target.classList.add("filter-size--active");
 }
 // thay ddooi so luoong
 let count = 1;
 function changeQuantityDetailProduct(index) {
-    const numberProduct = document.querySelector("#number-product");
-    if (index == 1) {
-        count += 1;
+  const numberProduct = document.querySelector("#number-product");
+  if (index == 1) {
+    count += 1;
+  }
+  else {
+    if (count > 1) {
+      count -= 1;
     }
     else {
-        if (count > 1) {
-            count -= 1;
-        }
-        else {
-            count = 1;
-        }
+      count = 1;
     }
-    numberProduct.value = count;
+  }
+  numberProduct.value = count;
 }   
