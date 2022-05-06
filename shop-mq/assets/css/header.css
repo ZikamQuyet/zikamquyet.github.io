@@ -87,7 +87,7 @@ header {
 }
 .cart-info__item {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   position: relative;
   margin-bottom: 5px;

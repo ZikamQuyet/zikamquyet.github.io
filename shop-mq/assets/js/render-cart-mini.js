@@ -1,5 +1,8 @@
+// let cart = [];
 let cart = [];
+cart = getDataFromLocalStorage("cart");
 const headerCart = document.querySelector(".header__cart");
+console.log(cart);
 function addCart(e, data) {
     const parentNodeBtn = e.target.parentNode;
     const productBtn = parentNodeBtn.parentNode;
@@ -40,10 +43,12 @@ function addCart(e, data) {
 
         }
     });
-    console.log(cart);
+    setDataFromLocalStorage(cart, "cart");
+    // render khi click them san pham
     headerCart.innerHTML = renderUICartMini(cart);
 }
-
+// render khi loading trang
+headerCart.innerHTML = renderUICartMini(cart);
 function renderUICartMini(data) {
     let html = `
             <span class="cart-quantity-product">${renderCartMiniQuantity(data)}</span>
@@ -110,7 +115,7 @@ function renderProductCartMini(data) {
                         </span>
                     </p>
                 </div>
-                <div class="cart__product-delete">
+                <div class="cart__product-delete" onclick="deleteProductCartMini(${i})">
                     <i class="fa-solid fa-xmark"></i>
                 </div>
             </div>
@@ -123,7 +128,19 @@ function renderProductCartMini(data) {
 function renderTotalPriceCartMini(data) {
     let total = 0;
     data.forEach(element => {
-        total += element.price;
+        total += element.price * element.quantity;
     });
     return renderPrice(total);
+}
+
+function deleteProductCartMini(index) {
+    for (let i = 0; i < cart.length; i++) {
+        if (i===index) {
+            cart.splice(i, 1);
+        }
+    }
+    console.log(index);
+    setDataFromLocalStorage(cart, "cart");
+    // render khi click xoa  san pham
+    headerCart.innerHTML = renderUICartMini(cart);
 }

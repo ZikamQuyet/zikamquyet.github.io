@@ -94,6 +94,7 @@
                 <i class="fa-regular fa-user"></i>
               </div>
               <div class="header__cart">
+                <span class="cart-quantity-product">0</span>
                 <i class="fa-solid fa-cart-shopping"></i>
                 <div class="cart-info">
                   <div class="cart-info__wrapper">
@@ -114,10 +115,11 @@
                             Archive Print Chuck Taylor All Star
                           </a>
                           <p class="cart__product-price">
-                            <span class="price-amount"
+                            <span class="price-amount">
+                              <span class="price--count">1 x </span
                               >1,800,000&nbsp;
-                              <span class="price-currency-symbol">₫</span></span
-                            >
+                              <span class="price-currency-symbol">₫</span>
+                            </span>
                           </p>
                         </div>
                         <div class="cart__product-delete">
@@ -225,7 +227,7 @@
           <div class="row justify-content-center">
             <div class="col-12 header-bottom__nav">
               <ul class="nav justify-content-center">
-                <li class="nav__item nav__home">
+                <li class="nav__item nav__home nav__item--active">
                   <a href="index.html">Trang chủ</a>
                 </li>
                 <li class="nav__item nav__products--boy">
@@ -284,7 +286,7 @@
           <form action="#" id="form-login">
             <div class="modal__input">
               <label for="login-email"><p>Email *</p> </label>
-              <input type="email" placeholder="nhập email" id="login-email" />
+              <input type="email" placeholder="Nhập email" id="login-email" />
               <!-- input__check--error -->
               <small class="input__check" id="input__check-login-email">
                 <p>Sai email...</p></small
@@ -295,7 +297,7 @@
               <div class="password-wrapper">
                 <input
                   type="password"
-                  placeholder="nhập mật khẩu"
+                  placeholder="Nhập mật khẩu"
                   id="login-password"
                 />
                 <i class="fa-solid fa-eye"></i>
@@ -488,6 +490,11 @@
           </div>
         </div>
       </div>
+      <!-- thông báo đăng nhập-->
+      <div class="notify-login">
+        <i class="fa-solid fa-circle-check"></i>
+        <span>Đăng nhập thành công</span>
+      </div>
     </header>
 
     <!-- nav-breadcrumb -->
@@ -508,7 +515,7 @@
                   <thead>
                     <tr>
                       <th class="product-name" colspan="3">SẢN PHẨM</th>
-                      <th class="product-price">GIÁ</th>
+                      <th class="product-size">KÍCH THƯỚC</th>
                       <th class="product-quantity">SỐ LƯỢNG</th>
                       <th class="product-subtotal text-end">TỔNG</th>
                     </tr>
@@ -847,6 +854,9 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/login.js"></script>
     <script src="assets/js/app.js"></script>
+    <script src="assets/js/render-products.js"></script>
+    <script src="assets/js/render-cart-mini.js"></script>
   </body>
 </html>
