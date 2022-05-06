@@ -35,9 +35,9 @@ header {
 .header__cart {
   margin-left: 1.25rem;
   position: relative;
+  cursor: pointer;
 }
-.header__cart::before {
-  content: "0";
+.cart-quantity-product {
   position: absolute;
   top: -0.625rem;
   right: -0.625rem;
@@ -54,8 +54,8 @@ header {
 }
 .cart-info {
   position: absolute;
-  top: 0;
-  transform: translateY(16%);
+  top: 40px;
+  /* transform: translateY(16%); */
   right: -5px;
   z-index: 2000;
   background-color: var(--primary--color-4);
@@ -90,6 +90,7 @@ header {
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  margin-bottom: 5px;
 }
 
 .cart__product-img {

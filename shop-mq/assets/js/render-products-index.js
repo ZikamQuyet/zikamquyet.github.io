@@ -1,15 +1,9 @@
-// function randomData(data) {
-//     for (let i = 0; i < 8; i++) {
-//         data.push(products[Math.floor(Math.random() * 12)])
-//     }
-//     return data;
-// }
-// randomData(dataNewProduct, 8);
-// randomData(dataSellingProducts, 8);
-// let dataDiscountProducts=[products[1],products[11],products[3],products[8],products[10],products[4],products[9],products[2]]
-// console.log(dataDiscountProducts);
-// console.log(products);
-// setDataFromLocalStorage(dataDiscountProducts, "discountProducts");
+let newProductsLocal =[products[2],products[6],products[10],products[3],products[1],products[8],products[4],products[11]];
+let sellingProductsLocal =[products[10],products[1],products[7],products[8],products[10],products[3],products[9],products[2]];
+let discountProductsLocal=[products[1],products[11],products[3],products[8],products[10],products[4],products[9],products[2]];
+setDataFromLocalStorage(newProductsLocal, "newProducts");
+setDataFromLocalStorage(sellingProductsLocal, "sellingProducts");
+setDataFromLocalStorage(discountProductsLocal, "discountProducts");
 let dataNewProducts = getDataFromLocalStorage("newProducts");
 let dataSellingProducts = getDataFromLocalStorage("sellingProducts");
 let dataDiscountProducts = getDataFromLocalStorage("discountProducts");

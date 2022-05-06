@@ -24,7 +24,7 @@ li {
   --primary--color-5: #cacaca;
   --secondary-color-1: #b71811;
   --secondary-color-2: #dc2f18;
-  --border-color:#000
+  --border-color: #000;
 }
 *:before,
 *:after {
@@ -138,4 +138,11 @@ button:focus:not(:focus-visible) {
   color: var(--primary--color-4);
   border: none;
   box-shadow: none;
+}
+@media (max-width: 992px) {
+  h1,h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
 }
