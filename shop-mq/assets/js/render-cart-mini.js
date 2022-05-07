@@ -105,7 +105,9 @@ function addCart2(e, id) {
 // render khi loading trang
 headerCart.innerHTML = renderUICartMini(cart);
 function renderUICartMini(data) {
-    let html = `
+    let html;
+    if (data.length != 0) {
+        html = `
             <span class="cart-quantity-product">${renderCartMiniQuantity(data)}</span>
             <i class="fa-solid fa-cart-shopping"></i>
             <div class="cart-info">
@@ -133,7 +135,40 @@ function renderUICartMini(data) {
                 </div>
             </div>
             </div>
-    `
+        `
+    }
+    else {
+        html = `
+        <span class="cart-quantity-product">${renderCartMiniQuantity(data)}</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <div class="cart-info">
+        <div class="cart-info__wrapper">
+            <div class="cart-info__content text-center">
+               <p style="font-style: italic;color:#b71811;"> Chưa có sản phẩm nào</p>
+            </div>
+
+            <div class="cart-total-price">
+            <p>
+                Tổng:
+                <span class="price-amount">
+                    ${renderTotalPriceCart(data)}
+                </span>
+            </p>
+            </div>
+
+            <div class="cart-btn">
+            <a href="gio-hang.html" class="btn btn--s"
+                >Xem giỏ hàng</a
+            >
+            <a href="thanh-toan.html" class="btn btn--s"
+                >Thanh toán</a
+            >
+            </div>
+        </div>
+        </div>
+        `;
+    }
+    console.log(html)
     return html;
 }
 function renderCartMiniQuantity(data) {

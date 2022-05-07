@@ -459,6 +459,12 @@
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .collection__item:hover::before {
+    display: none;
+  }
+  .collection__item:hover.collection__item .btn {
+    display: none;
+  }
   /* ------------------------------- */
   /* khaongr cach product info */
   .product-info__details {

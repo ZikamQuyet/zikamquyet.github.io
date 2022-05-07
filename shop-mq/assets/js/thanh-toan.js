@@ -27,8 +27,9 @@ btnPaymentRegister.addEventListener('click', () => {
 const orderInfo = document.querySelector(".order-info");
 orderInfo.innerHTML = renderCartPayment(cart);
 function renderCartPayment(data) {
-    let html = `
-        
+    let html
+    if (data.length != 0) {
+        html = `
         <div class="order-info__title">ĐƠN HÀNG</div>
         <div class="order-info__item order-info__products">
             <p>Sản phẩm</p>
@@ -60,6 +61,42 @@ function renderCartPayment(data) {
         </div>
     
     `;
+    }
+    else {
+        html = `
+        <div class="order-info__title">ĐƠN HÀNG</div>
+        <div class="order-info__item order-info__products">
+            <p>Sản phẩm</p>
+            <span style="font-style: italic;color:#b71811;">Chưa có sản phẩm nào</span>
+            
+        </div>
+
+        <div class="order-info__item order-info__total-price">
+        <p>Tổng tiền hàng</p>
+        <span class="price-amount">${renderTotalPriceCart(data)}</span>
+        </div>
+
+        <div class="order-info__item order-info__total-transport-fee">
+        <p>Phí vận chuyển</p>
+        <p>Miễn phí</p>
+        </div>
+
+        <div class="order-info__item order-info__discount">
+        <p>Giảm giá</p>
+        <span class="price-amount">0 VND</span>
+        </div>
+
+        <div class="order-info__item order-info__total-price-amount">
+        <p>Tổng tiền thanh toán</p>
+        <span class="price-amount"> ${renderTotalPriceCart(data)}</span>
+        </div>
+
+        <div class="btn-order">
+        <button class="btn btn--s" onclick="order(event)">Đặt hàng</button>
+        </div>
+    
+    `;
+    }
     return html;
 }
 

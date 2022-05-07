@@ -3,7 +3,9 @@ const infoCart = document.querySelector(".cart-total-table tbody");
 cartContent.innerHTML = renderCartContent(cart);
 infoCart.innerHTML = renderInfoCart(cart);
 function renderCartContent(data) {
-    let html = `
+    let html;
+    if(data.length!=0){
+        html = `
         ${renderProductsCartContent(data)}
         <tr>
             <td colspan="6" class="actions clear">
@@ -28,6 +30,34 @@ function renderCartContent(data) {
             </td>
         </tr>
         `;
+    }
+    else{
+        html = `
+        <span style="font-style: italic; color:#b71811;">Chưa có sản phẩm nào</span>
+        <tr>
+            <td colspan="6" class="actions clear">
+                <div class="continue-shopping">
+                    <a
+                    class="button-continue-shopping btn btn--s"
+                    href="san-pham.html"
+                    >
+                        ← Tiếp tục xem sản phẩm
+                    </a>
+                </div>
+
+                <button
+                type="submit"
+                class="btn-update-cart btn btn--s"
+                name="update_cart"
+                value="Cập nhật giỏ hàng"
+                onclick="updateProductCart(event)"
+                >
+                    Cập nhật giỏ hàng
+                </button>
+            </td>
+        </tr>
+        `;
+    }
     return html;
 }
 function renderProductsCartContent(data) {
