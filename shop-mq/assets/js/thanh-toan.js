@@ -96,7 +96,7 @@ const txtPaymentName = document.querySelector("#payment-name");
 const txtPaymentAddress = document.querySelector("#payment-address");
 const txtPaymentPhone = document.querySelector("#payment-phone");
 const txtPaymentEmail = document.querySelector("#payment-email");
-const txtPaymentNotes = document.querySelector("#payment-notes");
+const txtPaymentNotes = document.querySelector("#notes");
 const methodPaymentMoney = document.querySelector("#money")
 const methodPaymentBanking = document.querySelector("#banking")
 
@@ -159,7 +159,7 @@ function order(e) {
         check++;
     }
     // check method payment
-    if (methodPaymentMoney.checked === false && methodPaymentBanking) {
+    if (methodPaymentMoney.checked === false && methodPaymentBanking.checked === false) {
         setError(errMethodPayment, "Hãy chọn phương thức thanh toán");
     }
     else {
@@ -179,5 +179,8 @@ function successPayment(data) {
     txtPaymentAddress.value = "";
     txtPaymentPhone.value = "";
     txtPaymentEmail.value = "";
-    txtPaymentNotes.value = "";
+    if (txtPaymentNotes.value != "") {
+        txtPaymentNotes.value = "";
+    }
+    notifySuccess("Đặt hàng thành công.");
 }

@@ -8,7 +8,7 @@ productWrapper.innerHTML = renderUIDetailProduct(products, idDetailProduct);
 function renderNavBreadcrumbProductDetail(data, id) {
   let html;
   data.forEach(e => {
-    if (e.id = id) {
+    if (e.id === id) {
       html = `
       <li class="breadcrumb__item"><a href="#">Trang chủ</a></li>
       <li class="breadcrumb__item"><a href="#">Sản phẩm</a></li>

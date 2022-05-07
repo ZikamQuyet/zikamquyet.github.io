@@ -96,7 +96,6 @@ btnLogin.addEventListener('click', (e) => {
         notifySuccess("Đăng nhập thành công");
         console.log(`Dang nhap thanh cong`);
         modalLogin.classList.remove(`modal--active`);
-        console.log("qqqq");
     }
     console.log(check)
 })
