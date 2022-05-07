@@ -260,9 +260,7 @@
 .product-info {
   margin: 3.75rem 0 0;
 }
-.product-images__slider-img {
-  opacity: 0.8;
-}
+
 .product-images__main img {
   top: 50%;
   width: 100%;
@@ -276,6 +274,9 @@
   position: absolute;
   top: 25%;
   text-align: center;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
 }
 .product-info__details-title h2 {
   font-style: normal;
@@ -466,6 +467,8 @@
   }
   .product-info__details-content {
     position: unset;
+    left: 0;
+    transform: translateX(0);
   }
   /* -------------------------------- */
   /* btn-buy-now, btn-thêm vào giỏ hàng  */
@@ -518,3 +521,4 @@
   }
   /* -------------------------------- */
 }
+

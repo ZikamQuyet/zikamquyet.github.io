@@ -1,9 +1,23 @@
 
 let idDetailProduct = getDataFromLocalStorage("idProduct");
 const productWrapper = document.querySelector("#product .product-wrapper");
+const breadcrumbProductDetail = document.querySelector(".breadcrumb-detail-product")
+breadcrumbProductDetail.innerHTML = renderNavBreadcrumbProductDetail(products, idDetailProduct);
 productWrapper.innerHTML = "";
 productWrapper.innerHTML = renderUIDetailProduct(products, idDetailProduct);
-
+function renderNavBreadcrumbProductDetail(data, id) {
+  let html;
+  data.forEach(e => {
+    if (e.id = id) {
+      html = `
+      <li class="breadcrumb__item"><a href="#">Trang chủ</a></li>
+      <li class="breadcrumb__item"><a href="#">Sản phẩm</a></li>
+      <li class="breadcrumb__item breadcrumb__item--active">${e.title}</li>
+      `
+    }
+  })
+  return html;
+}
 function renderUIDetailProduct(data, id) {
   let html;
   for (let i = 0; i < data.length; i++) {
