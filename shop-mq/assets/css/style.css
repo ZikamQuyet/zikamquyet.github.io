@@ -157,13 +157,13 @@
   font-weight: 600;
   color: var(--secondary-color-1);
 }
-.discount-price-amount{
+.discount-price-amount {
   margin-right: 5px;
 }
-.price-amount--hide{
+.price-amount--hide {
   display: none;
 }
-.price-amount--discount{
+.price-amount--discount {
   text-decoration: line-through;
   color: var(--primary--color-2) !important;
   opacity: 0.8;
@@ -450,6 +450,9 @@
 /* ------------------------------------------------------- */
 /* resp */
 @media (max-width: 992px) {
+  .product-info__list span {
+    font-size: 0.875rem;
+  }
   /* -------------------------------- */
   /* tiêu đề bộ sưu tập  */
   .collection__item h2 {
@@ -527,4 +530,3 @@
   }
   /* -------------------------------- */
 }
-
