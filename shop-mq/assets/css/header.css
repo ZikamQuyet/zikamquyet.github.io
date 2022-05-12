@@ -173,7 +173,7 @@ header {
   color: var(--primary--color-1);
   font-style: normal;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.625rem;
 }
 .nav__item i {

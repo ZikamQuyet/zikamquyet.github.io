@@ -49,10 +49,9 @@ ul.breadcrumb li a:hover {
   align-items: center;
 }
 .title-group {
-  font-style: normal;
   font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.625rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 /* ------------------------------------------------------- */
 /* group-collection */
@@ -71,20 +70,24 @@ ul.breadcrumb li a:hover {
   height: 1px;
   background-color: var(--primary--color-2);
 }
-.filter-box{
+.filter-box {
   padding-bottom: 0.5rem;
 }
 .filter-box a {
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   color: var(--primary--color-1);
 }
 .menu-collection--active a {
   color: var(--secondary-color-1);
 }
 .filter-box ul li label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   position: relative;
 }
 .checkmark {
@@ -117,7 +120,7 @@ ul.breadcrumb li a:hover {
 .filter-box ul li label input:checked ~ .checkmark:after {
   display: block;
 }
-#filter-color ul{
+#filter-color ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -144,12 +147,16 @@ ul.breadcrumb li a:hover {
   border: 1px solid var(--border-color);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
 }
-#filter-size ul{
+#filter-size ul {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
 }
 .filter-size {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   cursor: pointer;
   position: relative;
   padding: 5px;
@@ -192,13 +199,13 @@ ul.breadcrumb li a:hover {
   font-weight: 600;
   color: var(--secondary-color-1);
 }
-.discount-price-amount{
+.discount-price-amount {
   margin-right: 5px;
 }
-.price-amount--hide{
+.price-amount--hide {
   display: none;
 }
-.price-amount--discount{
+.price-amount--discount {
   text-decoration: line-through;
   color: var(--primary--color-2) !important;
   opacity: 0.8;
@@ -351,21 +358,21 @@ ul.breadcrumb li a:hover {
   .browse-tags span:first-child {
     display: block;
   }
-    /* btn-buy-now, btn-thêm vào giỏ hàng  */
-    .product__colors {
-      bottom: 3.5rem !important;
-      opacity: 1;
-    }
-    .product__btn {
-      margin-top: 0.625rem;
-      position: initial;
-      opacity: 1;
-    }
-    .product__btn__buy p {
-      font-size: 0.75rem;
-    }
-    .product-info__list::after {
-      min-width: 0;
-      width: 100%;
-    }
+  /* btn-buy-now, btn-thêm vào giỏ hàng  */
+  .product__colors {
+    bottom: 3.5rem !important;
+    opacity: 1;
+  }
+  .product__btn {
+    margin-top: 0.625rem;
+    position: initial;
+    opacity: 1;
+  }
+  .product__btn__buy p {
+    font-size: 0.75rem;
+  }
+  .product-info__list::after {
+    min-width: 0;
+    width: 100%;
+  }
 }

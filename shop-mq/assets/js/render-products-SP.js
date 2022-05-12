@@ -33,32 +33,31 @@ menuCollections.forEach(element => {
             dataProducts = dataDiscountProducts;
         }
         else {
-            dataProducts = dataSellingProducts;
             allProducts.innerHTML = renderUI(dataProducts, 6, "col-6", "col-lg-4", "dataProducts");
+            dataProducts = dataSellingProducts;
             changeColorActive();
         }
     })
 })
-// filter group-collection
-// const filterVendors = document.querySelectorAll("#filter-vendor li input");
-// filterVendors.forEach(e => {
-//     e.addEventListener("click", () => {
-//         let value = e.value;
-//         let newArr = [];
-//         if (e.checked) {
-//             products.forEach(e => {
-//                 if (e.category == value) {
-//                     newArr.push(e);
-//                 }
-//             })
-//         }
-//         else {
-//             newArr = dataProducts;
-//         }
-//         console.log(newArr);
-//         allProducts.innerHTML = renderUI(newArr, 6, "col-6", "col-lg-4", "newArr");
-//     })
-// })
+
+// // filter group-collection
+const filterVendors = document.querySelectorAll("#filter-vendor li input");
+let newArr = [];
+filterVendors.forEach(e => {
+    e.addEventListener("click", () => {
+        let value = e.value;
+        let collectionFilter = dataProducts.filter(e => e.category === value);
+        if (e.checked) {
+            allProducts.innerHTML = renderUI(collectionFilter, collectionFilter.length, "col-6", "col-lg-4", "collectionFilter");
+            changeColorActive();
+        }
+        // else{
+        //     console.log(test);
+        //     allProducts.innerHTML = renderUI(test, test.length, "col-6", "col-lg-4", "test");
+        // }
+
+    })
+})
 
 // filter color
 const filterColors = document.querySelectorAll("#filter-color li");

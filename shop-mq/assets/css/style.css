@@ -397,6 +397,9 @@
 
 /* ------------------------------------------------------- */
 /* đăng kí nhận thông tin */
+#subscribe{
+  margin-bottom: 0;
+}
 .subscribe-banner {
   position: relative;
   /* min-height: 170px; */

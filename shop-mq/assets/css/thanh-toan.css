@@ -172,4 +172,7 @@ ul.breadcrumb li a:hover {
   .breadcrumb {
     justify-content: center;
   }
+  .order-info {
+    margin-top: 1.875rem;
+  }
 }

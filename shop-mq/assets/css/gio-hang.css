@@ -50,8 +50,8 @@ thead tr {
 thead tr th {
   font-style: normal;
   font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.625rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   padding-bottom: 0.625rem;
 }
 thead tr::after {
@@ -85,7 +85,7 @@ thead tr::after {
 tr td {
   padding: 0.625rem 0.625rem 0.625rem 0;
 }
-.product-remove{
+.product-remove {
   cursor: pointer;
 }
 .product-thumbnail {
@@ -98,6 +98,11 @@ tr td {
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: var(--primary--color-1);
+}
+.product-size-item .sizes {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 .product-quantity .quantity {
   display: flex;
@@ -129,6 +134,11 @@ input::-webkit-inner-spin-button {
 .cart-total__item {
   position: relative;
 }
+.cart-total__item td {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
 .cart-total__item::after {
   content: "";
   position: absolute;
@@ -149,9 +159,9 @@ input::-webkit-inner-spin-button {
   line-height: 1.375rem;
   margin-bottom: 0.4rem;
 }
-.all-total-price-amount,
+.all-total-price-amount td,
 .all-total-price-amount span {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 @media (max-width: 992px) {
@@ -182,5 +192,8 @@ input::-webkit-inner-spin-button {
   .button-continue-shopping,
   .btn-update-cart {
     padding: 0.625rem;
+  }
+  .cart-total-wrapper {
+    margin-top: 1.875rem;
   }
 }
